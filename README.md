@@ -3,4 +3,4 @@
 
 |Code         |Title                                    | Link                                     |
 |:---         | ---:                                    | :---:                                    |
-|code01       | Reverse Array                           |[Link](./assets/array-reverse.jpg)        |
+|code01       | Reverse Array                           |[Link](./arrayrev/ChallengeREADME.md)        |
