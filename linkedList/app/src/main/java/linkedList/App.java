@@ -10,15 +10,19 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("hi Manar is here");
 
-        linkedList<String> newlist = new linkedList();
-        newlist.insert("A");
-        newlist.insert("B");
-        newlist.addLast("C");
-        newlist.print();
-        System.out.println( newlist.includes(""));
-        System.out.println(newlist.tostring());
+
+        linkedList1<String> newlist = new linkedList1();
+        newlist.insertNode("A");
+        newlist.insertNode("B");
+        newlist.insertNode("C");
+
+        newlist.printlist();
+        System.out.println("includes  A  : "+  newlist.includes("A"));
+        System.out.println("includes  C  : "+  newlist.includes("C"));
+        System.out.println("includes  E  : "+  newlist.includes("E"));
+        System.out.println("includes  Empty string  : "+  newlist.includes(""));
+        System.out.println("\n" +newlist.tostring());
 
     }
 }

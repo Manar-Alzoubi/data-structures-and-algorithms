@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+//import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -15,6 +18,104 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+//  empty linked list test
+    @Test
+    void emptyListTest()
+    {
+        linkedList1<String> myList = new linkedList1();
+        assertTrue(myList.head==null);
+    }
 
+//   insert into the linked list Test
+    @Test
+    void insertTest()
+    {
+        linkedList1<String> myList = new linkedList1();
+       myList.insertNode("C");
+       assertTrue(myList.includes("C")== true);
+    }
+//  head point to the first node
+    @Test
+    void pointToFirstTest()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("D");
+        assertTrue(myList.head.value=="D");
+    }
+    
+//    insert multiple nodes into the linked list
+    @Test
+    void insertmultNodesTest()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("E");
+        myList.insertNode("M");
+        assertTrue(myList.includes("M")==true && myList.includes("E")==true);
+    }
+//    return true when finding a value exist  "Integer"
+    @Test
+    void valueExistTest()
+    {
+        linkedList1<Integer> myList = new linkedList1();
+        myList.insertNode(10);
+        myList.insertNode(15);
+        myList.insertNode(70);
+        assertTrue(myList.includes(15)== true);
+        assertTrue(myList.includes(70)== true);
+
+    }
+
+    //    return true when finding a value exist "string"
+    @Test
+    void valueExistTest2()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("15");
+        myList.insertNode("Manar");
+        myList.insertNode("AB2");
+
+        assertTrue(myList.includes("AB2")== true);
+        assertTrue(myList.includes("Manar")== true);
+
+
+    }
+    //    return false when finding a value exist  "Integer"
+    @Test
+    void valueExistTest3()
+    {
+        linkedList1<Integer> myList = new linkedList1();
+        myList.insertNode(10);
+        myList.insertNode(15);
+        myList.insertNode(70);
+        assertTrue(myList.includes(55)== false);
+        assertTrue(myList.includes(85)== false);
+
+    }
+    //    return true when finding a value exist "string"
+    @Test
+    void valueExistTest4()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("15");
+        myList.insertNode("Manar");
+        myList.insertNode("AB2");
+
+        assertTrue(myList.includes("aB2")== false);
+        assertTrue(myList.includes("manar")== false);
+
+
+    }
+
+    //    return all the values that exist in the linked list
+    @Test
+    void printListTest()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("15");
+        myList.insertNode("Manar");
+        assertTrue(myList.tostring().compareTo("\"{Manar}->{15}->NULL\"") ==0);
+        assertTrue(myList.tostring().compareTo("{Manar}->{15}->NULL") !=0);
+
+    }
 
 }
