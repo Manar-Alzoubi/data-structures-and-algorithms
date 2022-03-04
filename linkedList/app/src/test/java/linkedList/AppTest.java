@@ -115,36 +115,37 @@ class AppTest {
 
     }
     // add a node to the end of the linked list
-//    @Test void addAtEnd()
-//    {
-//        linkedList1<String> myList = new linkedList1();
-//        myList.append("Z");
-//        assertTrue((myList.head.value == "Z" && myList.head.next== null)  ==true);
-//
-//    }
+    @Test void addAtEnd()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.append("Z");
+        assertTrue(( myList.head.next== null) == true);
+
+    }
     // add multiple nodes to the end of a linked list
-//    @Test
-//    void addMultipleEnd(){
-//        linkedList1<String> myList = new linkedList1();
-//        myList.append("G");
-//        myList.append("Z");
-//
-//        assertTrue(myList.head.value =="G" && myList.includes("Z" && myList));
-//
-//    }
+    @Test
+    void addMultipleEnd(){
+        linkedList1<String> myList = new linkedList1();
+        myList.append("G");
+        myList.append("Z");
+        assertTrue(myList.head.value =="G" && myList.head.next.value=="Z" && myList.head.next.next== null);
+
+    }
 // insert a node before a node located i the middle of a linked list
-//    @Test void(){
-//        linkedList1<String> myList = new linkedList1();
-//        myList.insertNode("me");
-//        myList.addBefore("me", "T");
-//
-//    }
+    @Test void nodeatmiddle(){
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("me");
+        myList.insertNode("K");
+        myList.addBefore("me", "T");
+        assertTrue(( myList.head.value=="K" &&myList.head.next.value == "T" && myList.head.next.next.value== "me")==true);
+    }
     //  insert a node before the first node of a linked list
     @Test void insertBeforeFirst() {
         linkedList1<String> myList = new linkedList1();
         myList.insertNode("A");
         myList.addBefore("A","L");
-        assertTrue((myList.head.value == "A"&& myList.head.next.value== "L"&& myList.head.next.next == null ) == true);
+        assertTrue(myList.head.value == "L"  && myList.head.next.value== "A");
+
 
 
     }
