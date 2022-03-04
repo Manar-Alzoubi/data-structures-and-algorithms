@@ -8,10 +8,7 @@ public class linkedList1<T> {
     }
 
     public void insertNode(T v){
-        System.out.println("value "+ v);
         Node newNode = new Node(v);
-        System.out.println(" newNode.next  "+ newNode.next );
-        System.out.println("this.head  "+this.head);
         newNode.next = this.head;
         this.head = newNode;
     }
@@ -54,6 +51,9 @@ public class linkedList1<T> {
 
     public void append(T v){
         Node pointer = this.head;
+        if(this.head == null)
+            insertNode(v);
+        else{
         while(pointer != null){
             if(pointer.next == null){
                 Node newNode = new Node(v);
@@ -62,39 +62,48 @@ public class linkedList1<T> {
                 break;
             }
             pointer = pointer.next;
-        }
+        }}
     }
 
     public void addBefore(T value, T newvalue){
+        boolean flag = false;
         Node pointer = this.head;
         Node newNode = new Node(newvalue);
         if(head.next == null)
         {
-            System.out.println("head.next   "+head.next.value);
-            insertNode(newvalue);}
-        while(pointer != null){
-            if(pointer.next.value == value){
-
-                newNode.next= pointer.next;
-                pointer.next = newNode;
-                break;
-            }
-            pointer = pointer.next;
+            newNode.next = this.head;
+            this.head = newNode;
         }
-    }
+        else {
+            while (pointer != null) {
+                if (pointer.next.value == value) {
+                    newNode.next = pointer.next;
+                    pointer.next = newNode;
+                    flag = true;
+                    break;
+                }
+                pointer = pointer.next;}
+            }
+            if(!flag)
+                  System.out.println( value +" is not found in linked list to add  "+ newvalue+ "  before it ");
+            else System.out.println(newvalue +" is added to linked list before "+ value);
+        }
 
     public void addAfter(T value, T newvalue){
+        boolean flag = false;
         Node pointer = this.head;
         Node newNode = new Node(newvalue);
         while(pointer != null){
             if(pointer.value == value){
                 newNode.next=  pointer.next ;
                 pointer.next= newNode;
-
+                flag = true;
                 break;
             }
-            pointer = pointer.next;
-        }
+            pointer = pointer.next;}
+        if(!flag)
+           System.out.println( value +" is not found in linked list to add "+ newvalue+"  after it ");
+        else System.out.println(newvalue +" is added to linked list after "+ value);
     }
 
 
