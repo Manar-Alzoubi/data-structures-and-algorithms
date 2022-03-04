@@ -6,11 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
-
 //import java.util.LinkedList;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test
@@ -117,5 +114,38 @@ class AppTest {
         assertTrue(myList.tostring().compareTo("{Manar}->{15}->NULL") !=0);
 
     }
+    // add a node to the end of the linked list
+//    @Test void addAtEnd()
+//    {
+//        linkedList1<String> myList = new linkedList1();
+//        myList.append("Z");
+//        assertTrue((myList.head.value == "Z" && myList.head.next== null)  ==true);
+//
+//    }
+    // add multiple nodes to the end of a linked list
+//    @Test
+//    void addMultipleEnd(){
+//        linkedList1<String> myList = new linkedList1();
+//        myList.append("G");
+//        myList.append("Z");
+//
+//        assertTrue(myList.head.value =="G" && myList.includes("Z" && myList));
+//
+//    }
+// insert a node before a node located i the middle of a linked list
+//    @Test void(){
+//        linkedList1<String> myList = new linkedList1();
+//        myList.insertNode("me");
+//        myList.addBefore("me", "T");
+//
+//    }
+    //  insert a node before the first node of a linked list
+    @Test void insertBeforeFirst() {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("A");
+        myList.addBefore("A","L");
+        assertTrue((myList.head.value == "A"&& myList.head.next.value== "L"&& myList.head.next.next == null ) == true);
 
+
+    }
 }

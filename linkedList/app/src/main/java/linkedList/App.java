@@ -23,6 +23,13 @@ public class App {
         System.out.println("includes  E  : "+  newlist.includes("E"));
         System.out.println("includes  Empty string  : "+  newlist.includes(""));
         System.out.println("\n" +newlist.tostring());
+        newlist.append("F");
+        newlist.printlist();
+        newlist.addBefore("A","E");
+        newlist.printlist();
+
+        newlist.addAfter("C","M");
+        newlist.printlist();
 
     }
 }

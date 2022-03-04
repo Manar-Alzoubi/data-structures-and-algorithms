@@ -8,4 +8,5 @@
 |code02       | Array Insertion Shift                   |[Link](./array-insert-shift/ChallengeReadne2.md) |
 |code03       | Binary Search Array                     |[Link](./binarySearch/ChallengeReadme.md)        |
 |code04       | Linked-List                             |[Link](./linkedList/ReadMe.md)                   |
+|code05       | Linked-List (cod echallenge 6 )         |[Link](./linkedList/readme6.md)                  |
 

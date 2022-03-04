@@ -8,7 +8,10 @@ public class linkedList1<T> {
     }
 
     public void insertNode(T v){
+        System.out.println("value "+ v);
         Node newNode = new Node(v);
+        System.out.println(" newNode.next  "+ newNode.next );
+        System.out.println("this.head  "+this.head);
         newNode.next = this.head;
         this.head = newNode;
     }
@@ -49,6 +52,50 @@ public class linkedList1<T> {
         System.out.println("\n");
     }
 
+    public void append(T v){
+        Node pointer = this.head;
+        while(pointer != null){
+            if(pointer.next == null){
+                Node newNode = new Node(v);
+                pointer.next = newNode;
+                newNode.next = null;
+                break;
+            }
+            pointer = pointer.next;
+        }
+    }
+
+    public void addBefore(T value, T newvalue){
+        Node pointer = this.head;
+        Node newNode = new Node(newvalue);
+        if(head.next == null)
+        {
+            System.out.println("head.next   "+head.next.value);
+            insertNode(newvalue);}
+        while(pointer != null){
+            if(pointer.next.value == value){
+
+                newNode.next= pointer.next;
+                pointer.next = newNode;
+                break;
+            }
+            pointer = pointer.next;
+        }
+    }
+
+    public void addAfter(T value, T newvalue){
+        Node pointer = this.head;
+        Node newNode = new Node(newvalue);
+        while(pointer != null){
+            if(pointer.value == value){
+                newNode.next=  pointer.next ;
+                pointer.next= newNode;
+
+                break;
+            }
+            pointer = pointer.next;
+        }
+    }
 
 
 }
