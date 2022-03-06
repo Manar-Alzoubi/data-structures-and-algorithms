@@ -65,30 +65,32 @@ public class linkedList1<T> {
         }}
     }
 
-    public void addBefore(T value, T newvalue){
+    public void addBefore(T value, T newvalue) {
         boolean flag = false;
         Node pointer = this.head;
         Node newNode = new Node(newvalue);
-        if(head.next == null)
-        {
-            newNode.next = this.head;
-            this.head = newNode;
-        }
-        else {
-            while (pointer != null) {
-                if (pointer.next.value == value) {
+        if (head.next == null || head.value==value){
+                    insertNode(newvalue);
+//            newNode.next = this.head;
+//            this.head = newNode;
+            flag = true;}
+         else {
+            while (pointer.next != null) {
+                if (pointer.next.value== value){
                     newNode.next = pointer.next;
-                    pointer.next = newNode;
-                    flag = true;
-                    break;
-                }
-                pointer = pointer.next;}
+                pointer.next = newNode;
+
+                flag = true;
+                break;
             }
+            pointer = pointer.next;}
+        }
+
             if(!flag)
                   System.out.println( value +" is not found in linked list to add  "+ newvalue+ "  before it ");
             else System.out.println(newvalue +" is added to linked list before "+ value);
-        }
 
+    }
     public void addAfter(T value, T newvalue){
         boolean flag = false;
         Node pointer = this.head;
@@ -100,7 +102,8 @@ public class linkedList1<T> {
                 flag = true;
                 break;
             }
-            pointer = pointer.next;}
+            pointer = pointer.next;
+        }
         if(!flag)
            System.out.println( value +" is not found in linked list to add "+ newvalue+"  after it ");
         else System.out.println(newvalue +" is added to linked list after "+ value);
