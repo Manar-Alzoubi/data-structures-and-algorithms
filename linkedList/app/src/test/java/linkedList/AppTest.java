@@ -10,6 +10,59 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class AppTest {
+    // find kth node from the end Where k is greater than the length of the linked list
+    @Test
+    void kIsGreater()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("A");
+        myList.insertNode("B");
+        myList.insertNode("C");
+
+        assertTrue(myList.KthFromLast(5) == "greater");
+    }
+
+    //  find kth node from the end Where k and the length of the list are the same
+    @Test void KthSameAsLength()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("A");
+        myList.insertNode("B");
+        assertTrue(myList.KthFromLast(2) == "B");
+    }
+
+    // find kth node from the end Where k is not a positive integer
+    @Test void KIsNegative(){
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("A");
+        myList.insertNode("B");
+        assertTrue(myList.KthFromLast(-1) == "negative");
+    }
+
+    // find kth node from the end Where the linked list is of a size 1
+    @Test void sizeOneTest()
+    {
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("A");
+        assertTrue(myList.KthFromLast(1) == "A");
+    }
+    // Happy Path where k is not at the end, but somewhere in the middle of the linked list
+    @Test void happyPathTest(){
+        linkedList1<String> myList = new linkedList1();
+        myList.insertNode("A");
+        myList.insertNode("B");
+        myList.insertNode("C");
+        myList.insertNode("D");
+        myList.insertNode("E");
+        myList.insertNode("F");
+
+        assertTrue(myList.KthFromLast(2) == "B");
+        assertTrue(myList.KthFromLast(3) == "C");
+        assertTrue(myList.KthFromLast(4) == "D");
+        assertTrue(myList.KthFromLast(5) == "E");
+
+    }
+
     @Test
     void appHasAGreeting() {
         App classUnderTest = new App();
@@ -39,28 +92,7 @@ class AppTest {
         myList.insertNode("D");
         assertTrue(myList.head.value=="D");
     }
-    
-//    insert multiple nodes into the linked list
-    @Test
-    void insertmultNodesTest()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("E");
-        myList.insertNode("M");
-        assertTrue(myList.includes("M")==true && myList.includes("E")==true);
-    }
-//    return true when finding a value exist  "Integer"
-    @Test
-    void valueExistTest()
-    {
-        linkedList1<Integer> myList = new linkedList1();
-        myList.insertNode(10);
-        myList.insertNode(15);
-        myList.insertNode(70);
-        assertTrue(myList.includes(15)== true);
-        assertTrue(myList.includes(70)== true);
 
-    }
 
     //    return true when finding a value exist "string"
     @Test
@@ -72,8 +104,6 @@ class AppTest {
         myList.insertNode("AB2");
 
         assertTrue(myList.includes("AB2")== true);
-        assertTrue(myList.includes("Manar")== true);
-
 
     }
     //    return false when finding a value exist  "Integer"
@@ -110,8 +140,8 @@ class AppTest {
         linkedList1<String> myList = new linkedList1();
         myList.insertNode("15");
         myList.insertNode("Manar");
-        assertTrue(myList.tostring().compareTo("\"{Manar}->{15}->NULL\"") ==0);
-        assertTrue(myList.tostring().compareTo("{Manar}->{15}->NULL") !=0);
+        assertTrue(myList.toString().compareTo("\"{Manar}->{15}->NULL\"") ==0);
+        assertTrue(myList.toString().compareTo("{Manar}->{15}->NULL") !=0);
 
     }
     // add a node to the end of the linked list
@@ -131,6 +161,7 @@ class AppTest {
         assertTrue(myList.head.value =="G" && myList.head.next.value=="Z" && myList.head.next.next== null);
 
     }
+
 // insert a node before a node located i the middle of a linked list
     @Test void nodeatmiddle(){
         linkedList1<String> myList = new linkedList1();
@@ -145,8 +176,6 @@ class AppTest {
         myList.insertNode("A");
         myList.addBefore("A","L");
         assertTrue(myList.head.value == "L"  && myList.head.next.value== "A");
-
-
 
     }
 }

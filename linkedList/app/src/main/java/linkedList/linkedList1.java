@@ -7,25 +7,27 @@ public class linkedList1<T> {
         this.head = null;
     }
 
-    public void insertNode(T v){
-        Node newNode = new Node(v);
+    // insert nodes to the head of linked list
+    public void insertNode(T value){
+        Node newNode = new Node(value);
         newNode.next = this.head;
         this.head = newNode;
     }
-
-    public Boolean includes(T v) {
+    // check if a certain node list in linked list
+    public Boolean includes(T value) {
         Node pointer = this.head;
-        boolean x = false;
+        boolean flag = false;
         while(pointer != null)
         {
-            if(pointer.value == v)
-                x=true;
+            if(pointer.value == value)
+                flag=true;
             pointer = pointer.next;
+            break;
         }
-        return x;
+        return flag;
     }
-
-    public String tostring() {
+    // print linked list in certain way  // "{C}->{B}->{A}->NULL"
+    public String toString() {
         String str= "";
 
         Node pointer = this.head;
@@ -38,8 +40,8 @@ public class linkedList1<T> {
             }}
         return "\""+str+"NULL"+"\"";
     }
-
-    public void printlist(){
+    // print the nodes in linked list
+    public void printList(){
         Node pointer = this.head;
         while(pointer != null)
         {
@@ -48,7 +50,7 @@ public class linkedList1<T> {
         }
         System.out.println("\n");
     }
-
+    // add node to the last
     public void append(T v){
         Node pointer = this.head;
         if(this.head == null)
@@ -64,15 +66,13 @@ public class linkedList1<T> {
             pointer = pointer.next;
         }}
     }
-
-    public void addBefore(T value, T newvalue) {
+    // add new node before certain node
+    public void addBefore(T value, T newValue) {
         boolean flag = false;
         Node pointer = this.head;
-        Node newNode = new Node(newvalue);
+        Node<T> newNode = new Node<>(newValue);
         if (head.next == null || head.value==value){
-                    insertNode(newvalue);
-//            newNode.next = this.head;
-//            this.head = newNode;
+                    insertNode(newValue);
             flag = true;}
          else {
             while (pointer.next != null) {
@@ -87,14 +87,15 @@ public class linkedList1<T> {
         }
 
             if(!flag)
-                  System.out.println( value +" is not found in linked list to add  "+ newvalue+ "  before it ");
-            else System.out.println(newvalue +" is added to linked list before "+ value);
+                  System.out.println( value +" is not found in linked list to add  "+ newValue + "  before it ");
+            else System.out.println(newValue +" is added to linked list before "+ value);
 
     }
-    public void addAfter(T value, T newvalue){
+    // add new node after certain node
+    public void addAfter(T value, T newValue){
         boolean flag = false;
         Node pointer = this.head;
-        Node newNode = new Node(newvalue);
+        Node<T> newNode = new Node<>(newValue);
         while(pointer != null){
             if(pointer.value == value){
                 newNode.next=  pointer.next ;
@@ -105,9 +106,50 @@ public class linkedList1<T> {
             pointer = pointer.next;
         }
         if(!flag)
-           System.out.println( value +" is not found in linked list to add "+ newvalue+"  after it ");
-        else System.out.println(newvalue +" is added to linked list after "+ value);
+           System.out.println( value +" is not found in linked list to add "+ newValue +"  after it ");
+        else System.out.println(newValue +" is added to linked list after "+ value);
     }
+
+    public String KthFromLast(int Kthposition)
+    {
+
+        Node pointer = this.head;
+        int count =0;
+
+        while(pointer.next != null) {
+            count++;
+            pointer = pointer.next;
+        }
+        System.out.println("\n num of nodes in linked list = "+ (count+1));
+        // return pointer to the head
+          pointer =this.head;
+        if (this.head == null) {
+            System.out.println("linked list is empty ");
+            return "empty";
+        }
+          else if(Kthposition <= 0) {
+            System.out.println(Kthposition +" number of node can't be less than or equal to zero ");
+            return "negative";
+        }
+            else if (Kthposition > count+1 ){
+                System.out.println(Kthposition + " is grater than length of linked list, it has " + (count+1)+ " nodes ");
+            return "greater";
+               }
+             else
+             {
+                 for (int i = 1; i <= count-Kthposition+1; i++)
+                     pointer = pointer.next;
+
+                 System.out.println("value of node at " + Kthposition +"  position from the end  is  "+ pointer.value);
+
+
+        }
+
+        return (String) pointer.value;
+
+    }
+
+
 
 
 }

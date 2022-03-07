@@ -11,42 +11,60 @@ public class App {
     public static void main(String[] args) {
 
 
-
+            // declare a linked list
         linkedList1<String> newlist = new linkedList1();
+
+        // insert nodes to the head of linked list
         newlist.insertNode("A");
         newlist.insertNode("B");
         newlist.insertNode("C");
+        newlist.insertNode("G");
+        newlist.insertNode("M");
+        newlist.insertNode("N");
 
-        newlist.printlist();
-        System.out.println("includes  A  : "+  newlist.includes("A"));
-        System.out.println("includes  C  : "+  newlist.includes("C"));
-        System.out.println("includes  E  : "+  newlist.includes("E"));
-        System.out.println("includes  Empty string  : "+  newlist.includes(""));
+        System.out.println("\n nods in linked list : ");
+        newlist.printList();
 
+          newlist.KthFromLast(9);
+        newlist.KthFromLast(6);
+        newlist.KthFromLast(0);
+        newlist.KthFromLast(-1);
+        newlist.KthFromLast(4);
+//
+//        // print the nodes in linked list
 
-        System.out.println("\n" +newlist.tostring());
+//
+//        // check if a certain node eist in linked list
+//        System.out.println("includes  A  : "+  newlist.includes("A"));
+//        System.out.println("includes  C  : "+  newlist.includes("C"));
+//        System.out.println("includes  E  : "+  newlist.includes("E"));
+//        System.out.println("includes  Empty string  : "+  newlist.includes(""));
+//
+//        // print linked list in certain way  // "{C}->{B}->{A}->NULL"
+//        System.out.println("\n" +newlist.toString());
+//
+//        // add node to the last
+//        newlist.append("F");
+//        newlist.printList();
+//        // add new node before the head
+//        newlist.addBefore("C","G");
+//        newlist.printList();
+//        // add new node before node in certain place at middle
+//        newlist.addBefore("B","E");
+//        newlist.printList();
+//         //  add before node not exist, nothing will added
+//        newlist.addBefore("X","Y");
+//        newlist.printList();
+//        // add new node after node in certain place at middle
+//        newlist.addAfter("A","M");
+//        newlist.printList();
+//        // add new node after the last node
+//        newlist.addAfter("F","W");
+//        newlist.printList();
+//        //  add after node not exist , nothing will added
+//        newlist.addAfter("Y","X");
+//        newlist.printList();
 
-
-        newlist.append("F");
-        newlist.printlist();
-
-        newlist.addBefore("C","G");
-        newlist.printlist();
-
-        newlist.addBefore("B","E");
-        newlist.printlist();
-
-        newlist.addBefore("X","Y");
-        newlist.printlist();
-
-        newlist.addAfter("A","M");
-        newlist.printlist();
-
-        newlist.addAfter("F","W");
-        newlist.printlist();
-
-        newlist.addAfter("Y","X");
-        newlist.printlist();
 
     }
 }
