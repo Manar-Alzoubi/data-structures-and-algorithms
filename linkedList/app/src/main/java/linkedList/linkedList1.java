@@ -120,24 +120,24 @@ public class linkedList1<T> {
             count++;
             pointer = pointer.next;
         }
-        System.out.println("\n num of nodes in linked list = "+ (count+1));
+        System.out.println("\n num of nodes in linked list = "+ (count+1)+ "  from index 0 to 5");
         // return pointer to the head
           pointer =this.head;
         if (this.head == null) {
             System.out.println("linked list is empty ");
             return "empty";
         }
-          else if(Kthposition <= 0) {
-            System.out.println(Kthposition +" number of node can't be less than or equal to zero ");
+          else if(Kthposition < 0) {
+            System.out.println(Kthposition +" number of node can't be less than zero ");
             return "negative";
         }
-            else if (Kthposition > count+1 ){
-                System.out.println(Kthposition + " is grater than length of linked list, it has " + (count+1)+ " nodes ");
+            else if (Kthposition > count ){
+                System.out.println(Kthposition + " is grater than length of linked list, it has " + (count+1)+ " nodes from index 0 to 5");
             return "greater";
                }
              else
              {
-                 for (int i = 1; i <= count-Kthposition+1; i++)
+                 for (int i = 1; i <= count-Kthposition; i++)
                      pointer = pointer.next;
 
                  System.out.println("value of node at " + Kthposition +"  position from the end  is  "+ pointer.value);

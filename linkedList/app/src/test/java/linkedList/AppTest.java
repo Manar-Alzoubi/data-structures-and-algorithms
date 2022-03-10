@@ -28,7 +28,7 @@ class AppTest {
         linkedList1<String> myList = new linkedList1();
         myList.insertNode("A");
         myList.insertNode("B");
-        assertTrue(myList.KthFromLast(2) == "B");
+        assertTrue(myList.KthFromLast(1) == "B");
     }
 
     // find kth node from the end Where k is not a positive integer
@@ -44,7 +44,7 @@ class AppTest {
     {
         linkedList1<String> myList = new linkedList1();
         myList.insertNode("A");
-        assertTrue(myList.KthFromLast(1) == "A");
+        assertTrue(myList.KthFromLast(0) == "A");
     }
     // Happy Path where k is not at the end, but somewhere in the middle of the linked list
     @Test void happyPathTest(){
@@ -56,10 +56,10 @@ class AppTest {
         myList.insertNode("E");
         myList.insertNode("F");
 
-        assertTrue(myList.KthFromLast(2) == "B");
-        assertTrue(myList.KthFromLast(3) == "C");
-        assertTrue(myList.KthFromLast(4) == "D");
-        assertTrue(myList.KthFromLast(5) == "E");
+        assertTrue(myList.KthFromLast(1) == "B");
+        assertTrue(myList.KthFromLast(2) == "C");
+        assertTrue(myList.KthFromLast(3) == "D");
+        assertTrue(myList.KthFromLast(4) == "E");
 
     }
 
