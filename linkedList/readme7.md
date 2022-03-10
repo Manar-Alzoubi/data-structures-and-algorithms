@@ -8,7 +8,7 @@
 <!-- Embedded whiteboard image -->
 white board for function KthPositionFromEnd 
 
-![append ](/assets/kthposition.jpg)
+![kth position  ](../assets/kthposition.jpg)
 
 
 ## Approach & Efficiency
@@ -27,6 +27,6 @@ white board for function KthPositionFromEnd
     *  if you want to return value of node linked list that in kth position from the end call KthFromLast and pass the k number  
      * example : KthFromLast(3);
 
+  
+    * link To code  [Link](/linkedList/app/src/main/java/linkedList/linkedList1.java)
 
-
-     * link To code  [Link](/linkedList/app/src/main/java/linkedList/linkedList1.java)
