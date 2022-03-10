@@ -6,6 +6,47 @@ public class linkedList1<T> {
     public linkedList1(){
         this.head = null;
     }
+    public linkedList1 zipList(linkedList1 list1, linkedList1 list2) {
+        Node<T> pointer1 = list1.head;
+        Node<T> pointer2 = list2.head;
+        Node<T> temp1;
+        Node<T> temp2;
+        if (list1.head == null && list2.head == null) {
+            return null;
+        } else if (pointer1 == null) {
+            return list2;
+        } else if (pointer2 == null) {
+            return list1;
+        }
+        else {
+            while (pointer1.next != null && pointer2.next != null) {
+                temp1 = pointer1.next;
+                temp2 = pointer2.next;
+
+                pointer1.next = pointer2;
+                pointer2.next = temp1;
+
+                pointer1 = temp1;
+//              temp1 = pointer1.next;
+                pointer2 = temp2;
+//              pointer1.next = temp2;
+            }
+            if (pointer1.next == null) {
+                pointer1.next = pointer2;
+//               pointer1.next=pointer2.next;
+//               System.out.println("pointer1.value    "+ pointer1.value);
+//                System.out.println("pointer2.value    "+ pointer2.value);
+        }
+            if (pointer2.next == null) {
+                temp1=pointer1.next;
+                pointer1.next=pointer2;
+                pointer2.next= temp1;
+//               pointer1.next = pointer2;
+            }
+            return list1;
+
+        }
+         }
 
     // insert nodes to the head of linked list
     public void insertNode(T value){
@@ -148,10 +189,6 @@ public class linkedList1<T> {
         return (String) pointer.value;
 
     }
-
-
-
-
-}
+    }
 
 

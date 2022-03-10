@@ -10,7 +10,49 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class AppTest {
+    // zip 2 lists with the same size
+    @Test void zipListTest()
+    {linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list1 = new linkedList1();
+        linkedList1<Integer> list2 = new linkedList1();
+        list1.append(1);
+        list1.append(3);
+
+        list2.append(2);
+        list2.append(4);
+        assertEquals((newlist.zipList(list1,list2)).toString(),"\"{1}->{2}->{3}->{4}->NULL\"" );
+    }
+    // zip test if size of list 1 grater than size of list 2
+    @Test void zipListTest2()
+    {
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list1 = new linkedList1();
+        linkedList1<Integer> list2 = new linkedList1();
+        list1.append(1);
+        list1.append(3);
+        list1.append(5);
+        list2.append(2);
+        list2.append(4);
+        assertEquals((newlist.zipList(list1,list2)).toString(),"\"{1}->{2}->{3}->{4}->{5}->NULL\"");
+    }
+
+    // zip test if size of list 2 grater than size of list 1
+    @Test void zipListTest3()
+    {
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list1 = new linkedList1();
+        linkedList1<Integer> list2 = new linkedList1();
+        list1.append(1);
+        list1.append(3);
+
+        list2.append(2);
+        list2.append(4);
+        list1.append(6);
+        assertEquals((newlist.zipList(list1,list2)).toString(),"\"{1}->{2}->{3}->{4}->{6}->NULL\"");
+    }
+
     // find kth node from the end Where k is greater than the length of the linked list
+
     @Test
     void kIsGreater()
     {
@@ -84,98 +126,6 @@ class AppTest {
        myList.insertNode("C");
        assertTrue(myList.includes("C")== true);
     }
-//  head point to the first node
-    @Test
-    void pointToFirstTest()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("D");
-        assertTrue(myList.head.value=="D");
-    }
 
 
-    //    return true when finding a value exist "string"
-    @Test
-    void valueExistTest2()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("15");
-        myList.insertNode("Manar");
-        myList.insertNode("AB2");
-
-        assertTrue(myList.includes("AB2")== true);
-
-    }
-    //    return false when finding a value exist  "Integer"
-    @Test
-    void valueExistTest3()
-    {
-        linkedList1<Integer> myList = new linkedList1();
-        myList.insertNode(10);
-        myList.insertNode(15);
-        myList.insertNode(70);
-        assertTrue(myList.includes(55)== false);
-        assertTrue(myList.includes(85)== false);
-
-    }
-    //    return true when finding a value exist "string"
-    @Test
-    void valueExistTest4()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("15");
-        myList.insertNode("Manar");
-        myList.insertNode("AB2");
-
-        assertTrue(myList.includes("aB2")== false);
-        assertTrue(myList.includes("manar")== false);
-
-
-    }
-
-    //    return all the values that exist in the linked list
-    @Test
-    void printListTest()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("15");
-        myList.insertNode("Manar");
-        assertTrue(myList.toString().compareTo("\"{Manar}->{15}->NULL\"") ==0);
-        assertTrue(myList.toString().compareTo("{Manar}->{15}->NULL") !=0);
-
-    }
-    // add a node to the end of the linked list
-    @Test void addAtEnd()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.append("Z");
-        assertTrue(( myList.head.next== null) == true);
-
-    }
-    // add multiple nodes to the end of a linked list
-    @Test
-    void addMultipleEnd(){
-        linkedList1<String> myList = new linkedList1();
-        myList.append("G");
-        myList.append("Z");
-        assertTrue(myList.head.value =="G" && myList.head.next.value=="Z" && myList.head.next.next== null);
-
-    }
-
-// insert a node before a node located i the middle of a linked list
-    @Test void nodeatmiddle(){
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("me");
-        myList.insertNode("K");
-        myList.addBefore("me", "T");
-        assertTrue(( myList.head.value=="K" &&myList.head.next.value == "T" && myList.head.next.next.value== "me")==true);
-    }
-    //  insert a node before the first node of a linked list
-    @Test void insertBeforeFirst() {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("A");
-        myList.addBefore("A","L");
-        assertTrue(myList.head.value == "L"  && myList.head.next.value== "A");
-
-    }
 }
