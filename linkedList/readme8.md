@@ -6,7 +6,7 @@
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-white board for function KthPositionFromEnd
+white board for function ziplist
 
 ![ziplist ](../assets/ziplist.jpg)
 
