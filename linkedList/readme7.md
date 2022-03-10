@@ -1,3 +1,4 @@
+
 # Challenge Summary
 <!-- Description of the challenge -->
 
@@ -8,13 +9,13 @@
 <!-- Embedded whiteboard image -->
 white board for function KthPositionFromEnd 
 
-![append ](/assets/kthposition.jpg)
+![kth position  ](../assets/kthposition.jpg)
 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-* the approach I take is to loop through array until find the number of nodes then loop to until reach count-kthposition +1  and return this node value 
+* the approach I take is to loop through array until find the number of nodes then loop to until reach count-kthposition  and return this node value 
 
  * Time complixit : Big(O)
  * space complixity: O(1)
@@ -27,6 +28,7 @@ white board for function KthPositionFromEnd
     *  if you want to return value of node linked list that in kth position from the end call KthFromLast and pass the k number  
      * example : KthFromLast(3);
 
+  
+    * link To code  [Link](/linkedList/app/src/main/java/linkedList/linkedList1.java)
 
 
-     * link To code  [Link](/linkedList/app/src/main/java/linkedList/linkedList1.java)

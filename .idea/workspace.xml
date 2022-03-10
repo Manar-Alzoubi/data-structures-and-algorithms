@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/ziplist.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkedList/readme8.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedList/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/linkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/linkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/linkedList1.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/linkedList1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linkedList/app/src/test/java/linkedList/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/test/java/linkedList/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedList/readme7.md" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/readme7.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +23,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25tKJdRKbTyNRnwTwjhANi0JnTs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
@@ -38,5 +45,19 @@
       <updated>1646340884985</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
