@@ -1,12 +1,12 @@
 # Challenge Summary
 <!-- Description of the challenge -->
 
-* Write the following method for the Linked List class that recivecs an integer and return the value of node that represent Kth node from the end
+* Write the following method for the Linked List class that recivecs 2 lists and return the zip of two lists in one list 
 
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-white board for function KthPositionFromEnd
+white board for function zipList
 
 ![ziplist ](../assets/ziplist.jpg)
 

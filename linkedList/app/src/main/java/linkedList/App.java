@@ -19,18 +19,19 @@ public class App {
         list1.insertNode(1);
         list1.append(3);
         list1.append(5);
-//        list1.append(7);
+        list1.append(7);
 //        list1.append(9);
 
         list2.insertNode(2);
         list2.append(4);
-//        list2.append(6);
+        list2.append(6);
 //        list2.append(8);
 //        list2.append(10);
         System.out.println("list 1 =   " +list1.toString());
         System.out.println("list 2 =   "+list2.toString() );
         System.out.println("zip list =  " +newlist.zipList(list1,list2).toString());
-//        newlist.zipList(list1,list2);
+        newlist.zipList(list1,list2);
+
 
 //        linkedList1<String> newlist = new linkedList1();
 //        // insert nodes to the head of linked list
