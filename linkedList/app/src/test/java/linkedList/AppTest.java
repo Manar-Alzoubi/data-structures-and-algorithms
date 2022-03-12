@@ -11,59 +11,49 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class AppTest {
-    // find kth node from the end Where k is greater than the length of the linked list
-    @Test
-    void kIsGreater()
+
+    // zip 2 lists with the same size
+    @Test void zipListTest()
+    {linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list1 = new linkedList1();
+        linkedList1<Integer> list2 = new linkedList1();
+        list1.append(1);
+        list1.append(3);
+
+        list2.append(2);
+        list2.append(4);
+        assertEquals((newlist.zipList(list1,list2)).toString(),"\"{1}->{2}->{3}->{4}->NULL\"" );
+    }
+    // zip test if size of list 1 grater than size of list 2
+    @Test void zipListTest2()
     {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("A");
-        myList.insertNode("B");
-        myList.insertNode("C");
-
-        assertTrue(myList.KthFromLast(5) == "greater");
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list1 = new linkedList1();
+        linkedList1<Integer> list2 = new linkedList1();
+        list1.append(1);
+        list1.append(3);
+        list1.append(5);
+        list2.append(2);
+        list2.append(4);
+        assertEquals((newlist.zipList(list1,list2)).toString(),"\"{1}->{2}->{3}->{4}->{5}->NULL\"");
     }
 
-    //  find kth node from the end Where k and the length of the list are the same
-    @Test void KthSameAsLength()
+    // zip test if size of list 2 grater than size of list 1
+    @Test void zipListTest3()
     {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("A");
-        myList.insertNode("B");
-        assertTrue(myList.KthFromLast(1) == "B");
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list1 = new linkedList1();
+        linkedList1<Integer> list2 = new linkedList1();
+        list1.append(1);
+        list1.append(3);
+
+        list2.append(2);
+        list2.append(4);
+        list1.append(6);
+        assertEquals((newlist.zipList(list1,list2)).toString(),"\"{1}->{2}->{3}->{4}->{6}->NULL\"");
     }
 
-    // find kth node from the end Where k is not a positive integer
-    @Test void KIsNegative(){
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("A");
-        myList.insertNode("B");
-        assertTrue(myList.KthFromLast(-1) == "negative");
-    }
-
-    // find kth node from the end Where the linked list is of a size 1
-    @Test void sizeOneTest()
-    {
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("A");
-        assertTrue(myList.KthFromLast(0) == "A");
-    }
-    // Happy Path where k is not at the end, but somewhere in the middle of the linked list
-    @Test void happyPathTest(){
-        linkedList1<String> myList = new linkedList1();
-        myList.insertNode("A");
-        myList.insertNode("B");
-        myList.insertNode("C");
-        myList.insertNode("D");
-        myList.insertNode("E");
-        myList.insertNode("F");
-
-        assertTrue(myList.KthFromLast(1) == "B");
-        assertTrue(myList.KthFromLast(2) == "C");
-        assertTrue(myList.KthFromLast(3) == "D");
-        assertTrue(myList.KthFromLast(4) == "E");
-
-    }
-
+   
 
 
 

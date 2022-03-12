@@ -15,7 +15,9 @@ white board for function KthPositionFromEnd
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+
 * the approach I take is to loop through array until find the number of nodes then loop to until reach count-kthposition  and return this node value 
+
 
  * Time complixit : Big(O)
  * space complixity: O(1)
