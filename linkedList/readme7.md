@@ -1,3 +1,4 @@
+
 # Challenge Summary
 <!-- Description of the challenge -->
 
@@ -14,7 +15,9 @@ white board for function KthPositionFromEnd
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-* the approach I take is to loop through array until find the number of nodes then loop to until reach count-kthposition +1  and return this node value 
+
+* the approach I take is to loop through array until find the number of nodes then loop to until reach count-kthposition  and return this node value 
+
 
  * Time complixit : Big(O)
  * space complixity: O(1)
@@ -29,4 +32,5 @@ white board for function KthPositionFromEnd
 
   
     * link To code  [Link](/linkedList/app/src/main/java/linkedList/linkedList1.java)
+
 

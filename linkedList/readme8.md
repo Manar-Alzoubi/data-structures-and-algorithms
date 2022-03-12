@@ -6,7 +6,9 @@
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+
 white board for function zipList
+
 
 ![ziplist ](../assets/ziplist.jpg)
 
