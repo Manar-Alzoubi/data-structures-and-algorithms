@@ -11,7 +11,46 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class AppTest {
+    @Test void isPalindromTest()
+    {
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list = new linkedList1();
+        list.insertNode(1);
+        list.append(2);
+        list.append(3);
+        assertTrue(!(newlist.Ispalindrom(list)) );
+    }
+    @Test void isPalindromTest2()
+    {
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list = new linkedList1();
+        list.insertNode(1);
+        list.append(2);
+        list.append(2);
+        list.append(1);
+        assertTrue((newlist.Ispalindrom(list)) );
+    }
 
+    @Test void isPalindromTest3() {
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list = new linkedList1();
+        list.insertNode(2);
+        list.append(3);
+        list.append(6);
+        list.append(3);
+        list.append(2);
+        assertTrue((newlist.Ispalindrom(list)) );
+    }
+    @Test void isPalindromTest4() {
+        linkedList1<Integer> newlist = new linkedList1();
+        linkedList1<Integer> list = new linkedList1();
+        list.insertNode(2);
+        list.append(3);
+        list.append(6);
+        list.append(5);
+        list.append(2);
+        assertTrue(!(newlist.Ispalindrom(list)) );
+    }
     // zip 2 lists with the same size
     @Test void zipListTest()
     {linkedList1<Integer> newlist = new linkedList1();
