@@ -1,11 +1,45 @@
 package linkedList;
 
+import java.util.ArrayList;
+
 public class linkedList1<T> {
     Node head;
 
-    public linkedList1(){
+    public linkedList1() {
         this.head = null;
     }
+
+    public boolean Ispalindrom(linkedList1 list) {
+        Node pointer1 = list.head;
+
+        ArrayList<Integer> mylist = new ArrayList<>();
+        int size =0;
+        while (pointer1 != null) {
+            mylist.add((Integer) pointer1.value);
+            pointer1 = pointer1.next;
+            size++;
+        }
+         pointer1=list.head;
+        int []arr = new int[size];
+        for(int  i=0;i<size;i++){
+            arr[i] = (int) pointer1.value;
+            pointer1=pointer1.next;}
+        for(int i : arr)
+            System.out.println(i);
+        boolean flag= false;
+        int x=arr.length;
+            for(int i=0; i< arr.length;i++){
+                if (arr[i] != arr[x-i-1]) {
+                    flag = false;
+                    break;
+                }
+                else {
+                    flag = true;
+                }
+        }
+                return flag;
+    }
+
     public linkedList1 zipList(linkedList1 list1, linkedList1 list2) {
         Node<T> pointer1 = list1.head;
         Node<T> pointer2 = list2.head;
