@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/ziplist.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linkedList/readme8.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/app/src/main/java/stackAndQueue/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/app/src/main/java/stackAndQueue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/app/src/main/java/stackAndQueue/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackAndQueue/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/linkedList1.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/main/java/linkedList/linkedList1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedList/app/src/test/java/linkedList/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/app/src/test/java/linkedList/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedList/readme7.md" beforeDir="false" afterPath="$PROJECT_DIR$/linkedList/readme7.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
