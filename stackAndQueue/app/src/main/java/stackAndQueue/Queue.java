@@ -89,5 +89,16 @@ public class Queue<T> {
                 ", front=  " + front +
                 ", size=  " + size +
                 '}';
+
+//        String allQueueToPrint = " Queue {";
+//        Node<T> pointerAtCurrent;
+//        pointerAtCurrent =back;
+//        while (pointerAtCurrent !=null){
+//            allQueueToPrint +="{"+ pointerAtCurrent.getValue()+"}->";
+//            pointerAtCurrent = pointerAtCurrent.getNext();
+//        }
+//        allQueueToPrint=allQueueToPrint+"front";
+//
+//        return allQueueToPrint + "  {size = "+size +"}";
     }
 }

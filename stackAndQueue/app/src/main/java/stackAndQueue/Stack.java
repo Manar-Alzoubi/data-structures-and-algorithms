@@ -10,6 +10,15 @@ public class Stack <T>{
         this.top = null;
         size = 0;
     }
+
+    public Node<T> getTop() {
+        return top;
+    }
+
+    public void setTop(Node<T> top) {
+        this.top = top;
+    }
+
     // Returns Boolean if the stack is empty or not
     public boolean isEempty() {
         return top == null;
@@ -57,7 +66,7 @@ public class Stack <T>{
     public String toString() {
         return "Stack{" +
                 "top=" + top +"}"+
-                "   {size= "+size+
+                "   {sizeOStack = "+size+
                 '}';
     }
 }
