@@ -12,5 +12,6 @@
 | code07 | Linked-List (cod echallenge 7 ) |         [Link](./linkedList/readme7.md)          |
 | code08 | Linked-List (cod echallenge 8 ) |         [Link](./linkedList/readme8.md)          |
 | code08 | Linked-List (cod echallenge 9 ) |         [Link](./linkedList/readme9.md)          |
-| code10 | Linked-List (cod echallenge 10 )|          [Link](./stackAndQueue/readme)          |
+| code10 | Linked-List (cod echallenge 10 )|          [Link](./stackAndQueue/readme.md)       |
+| code11 | Linked-List (cod echallenge 11 )|          [Link](./stackAndQueue/readme11.md)     |
 
