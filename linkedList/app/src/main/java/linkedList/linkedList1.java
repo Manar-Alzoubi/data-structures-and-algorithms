@@ -12,7 +12,7 @@ public class linkedList1<T> {
     public boolean Ispalindrom(linkedList1 list) {
         Node pointer1 = list.head;
 
-        ArrayList<Integer> mylist = new ArrayList<>();
+//         ArrayList<Integer> mylist = new ArrayList<>();
         int size =0;
         while (pointer1 != null) {
             mylist.add((Integer) pointer1.value);
