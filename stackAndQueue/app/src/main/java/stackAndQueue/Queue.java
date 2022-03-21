@@ -56,7 +56,7 @@ public class Queue<T> {
         if(!isEmpty()){// if not empty remove the element on top
             while (Temp !=null) {
 
-                if (Temp == front) {
+                if (Temp.getNext() == front) {
                     front = Temp;
                     size--;
                 }
@@ -84,21 +84,21 @@ public class Queue<T> {
 
     @Override
     public String toString() {
-//        return "Queue{" +
-//                "back=  " + back +
-//                ", front=  " + front +
-//                ", size=  " + size +
-//                '}';
+        return "Queue{" +
+                "back=  " + back +
+                ", front=  " + front +
+                ", size=  " + size +
+                '}';
 
-        String str = "Queue{ back->";
-        Node<T> curr;
-        curr =back;
-        while (curr !=null){
-            str +="{"+ curr.getValue()+"}->";
-            curr = curr.getNext();
-        }
-        str = str +"front" + "size = " +size ;
-//        frontPointer=frontPointer.getNext();
-        return str;
+//        String allQueueToPrint = " Queue {";
+//        Node<T> pointerAtCurrent;
+//        pointerAtCurrent =back;
+//        while (pointerAtCurrent !=null){
+//            allQueueToPrint +="{"+ pointerAtCurrent.getValue()+"}->";
+//            pointerAtCurrent = pointerAtCurrent.getNext();
+//        }
+//        allQueueToPrint=allQueueToPrint+"front";
+//
+//        return allQueueToPrint + "  {size = "+size +"}";
     }
 }
