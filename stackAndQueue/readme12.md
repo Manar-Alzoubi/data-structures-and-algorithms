@@ -9,7 +9,7 @@
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
-![Animals Shelter ](../assets//animals.jpg)
+![Animals Shelter ](../assets/animals.jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
