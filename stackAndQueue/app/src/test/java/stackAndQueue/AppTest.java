@@ -11,12 +11,52 @@ class AppTest {
     Queue<String> newQueue = new Queue<>();
     PseudoQueue<String> myPseudoQueue = new PseudoQueue<>();
     ValidateBrackets obj = new ValidateBrackets();
+    Stack<Integer> stack = new Stack<>();
 
     @BeforeEach
     void setUp() {
         newStack = new Stack();
         newQueue = new Queue<>();
     }
+    ////////// lab 14 ///////////////////
+
+    @Test void getMaxTest() throws Exception {
+        stack.push(2);
+        assertEquals( stack.getMax(),2);
+    }
+    @Test void getMaxTest1() throws Exception {
+        stack.push(2);
+        stack.pop();
+        assertEquals( stack.getMax(),0);
+    }
+    @Test void getMaxTest2() throws Exception {
+        stack.push(2);
+        stack.push(5);
+        stack.push(3);
+
+        assertEquals( stack.getMax(),5);
+    }
+    @Test void getMaxTest3() throws Exception {
+        stack.push(7);
+        stack.push(5);
+        stack.push(3);
+
+        assertEquals( stack.getMax(),7);
+    }
+    @Test void getMaxTest4() throws Exception {
+        stack.push(1);
+        stack.push(5);
+        stack.push(7);
+
+        assertEquals( stack.getMax(),7);
+    }
+
+
+
+
+
+
+
     /////////////////////////////// lab 13 ///////////////////////////////////////
 
     // test if string is Empty
