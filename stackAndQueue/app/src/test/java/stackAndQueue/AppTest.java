@@ -32,7 +32,7 @@ class AppTest {
     {
         myPseudoQueue.enqueuePseudoQueue("A");
         myPseudoQueue.enqueuePseudoQueue("B");
-        assertEquals(myPseudoQueue.toString(), "PseudoQueue{ back->{B}->{A}->front");
+        assertEquals(myPseudoQueue.toString(), "PseudoQueue{firstStack=Stack{top=Node{value=B}, next=Node{value=A}, next=null}   {sizeOStack = 2}, secondStackTemp=Stack{top=null}   {sizeOStack = 0}, backPointer=Node{value=B}, next=Node{value=A}, next=null, frontPointer=Node{value=A}, next=null, size=2}");
     }
     // test enqueue  if psudeoQueue has multiple nodes
     @Test void psudeoQueueEnqueueTest3()
@@ -41,7 +41,7 @@ class AppTest {
         myPseudoQueue.enqueuePseudoQueue("B");
         myPseudoQueue.enqueuePseudoQueue("C");
         myPseudoQueue.enqueuePseudoQueue("D");
-        assertEquals(myPseudoQueue.toString(), "PseudoQueue{ back->{D}->{C}->{B}->{A}->front");
+        assertEquals(myPseudoQueue.toString(), "PseudoQueue{firstStack=Stack{top=Node{value=D}, next=Node{value=C}, next=Node{value=B}, next=Node{value=A}, next=null}   {sizeOStack = 4}, secondStackTemp=Stack{top=null}   {sizeOStack = 0}, backPointer=Node{value=D}, next=Node{value=C}, next=Node{value=B}, next=Node{value=A}, next=null, frontPointer=Node{value=A}, next=null, size=4}");
     }
     // test dequeue if psudeoQueue is empty // it will be exception
     @Test void psudeoQueueDequeueTest () throws Exception {
@@ -129,7 +129,7 @@ class AppTest {
     void testEnqueue2values() {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
-        assertEquals(newQueue.toString(),"Queue{back=  Node{value=Sadan}, next=Node{value=Manar}, next=null, front=  Node{value=Manar}, next=null, size=  2}");
+        assertEquals(newQueue.toString(),"Queue{back=Node{value=Sadan}, next=Node{value=Manar}, next=null, front=Node{value=Manar}, next=null, size=2}");
     }
     //Can successfully dequeue out of a queue the expected value
     @Test
@@ -137,7 +137,7 @@ class AppTest {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
         newQueue.dequeue();
-        assertEquals(newQueue.toString(),"Queue{back=  Node{value=Sadan}, next=Node{value=Manar}, next=null, front=  Node{value=Sadan}, next=Node{value=Manar}, next=null, size=  1}");
+        assertEquals(newQueue.toString(),"Queue{back=Node{value=Sadan}, next=null, front=Node{value=Sadan}, next=null, size=1}");
     }
     //Can successfully peek into a queue, seeing the expected value
     @Test
@@ -152,7 +152,7 @@ class AppTest {
     void testEmptyQueue() throws Exception {
         newQueue.enqueue("Manar");
         newQueue.dequeue();
-        assertEquals(newQueue.isEmpty(),false);
+        assertEquals(newQueue.isEmpty(),true);
     }
     //Can successfully instantiate an empty queue
     @Test
