@@ -1,39 +1,11 @@
 
+
 package stackAndQueue;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
-
-//        System.out.println("\n ---------  Here is the PseudoQueue (queue using 2 stacks) ------- \n");
-//
-//        PseudoQueue<String> myPseudoQueue = new PseudoQueue<>();
-//        myPseudoQueue.enqueuePseudoQueue("A");
-//        System.out.println("after enqueue : ===>  " + myPseudoQueue);
-//        myPseudoQueue.enqueuePseudoQueue("B");
-//        myPseudoQueue.enqueuePseudoQueue("C");
-//        System.out.println("after enqueue : ===>  " + myPseudoQueue);
-//        myPseudoQueue.enqueuePseudoQueue("D");
-//        System.out.println(" after enqueue : (D) ===>  " + myPseudoQueue);
-//        myPseudoQueue.enqueuePseudoQueue("W");
-//        System.out.println(" after enqueue : (W) ===>  " + myPseudoQueue);
-//
-//        System.out.println("\n*****************     dequeue     **********************\n");
-//        PseudoQueue<String> myPseudoQueue1 = new PseudoQueue<>();
-//        System.out.println(" after dequeue (stack empty) :  ===>  " + myPseudoQueue1.dequeuePseudoQueue() );
-//
-//
-//        myPseudoQueue1.enqueuePseudoQueue("X");
-//        myPseudoQueue1.enqueuePseudoQueue("Y");
-//        myPseudoQueue1.enqueuePseudoQueue("Z");
-//        System.out.println(" after enqueue :  ===>  " + myPseudoQueue1 +"   top = " +myPseudoQueue1.peek());
-//        System.out.println("decueue node  ===>  "+ myPseudoQueue1.dequeuePseudoQueue());
-//        System.out.println( "decueue node  ===>  "+myPseudoQueue1.dequeuePseudoQueue());
-//        System.out.println( "decueue node  ===>  "+myPseudoQueue1.dequeuePseudoQueue());
-
-
-
-
+      
         System.out.println("\n -----------------  Here is the stack ----------------------- ");
         Stack<String> myStack = new Stack();
         if (myStack.isEempty()) {
@@ -72,5 +44,37 @@ public class App {
 
 
     }
+
+
+
+      
+      
+
+//        System.out.println("\n ---------  Here is the PseudoQueue (queue using 2 stacks) ------- \n");
+//
+//        PseudoQueue<String> myPseudoQueue = new PseudoQueue<>();
+//        myPseudoQueue.enqueuePseudoQueue("A");
+//        System.out.println("after enqueue : ===>  " + myPseudoQueue);
+//        myPseudoQueue.enqueuePseudoQueue("B");
+//        myPseudoQueue.enqueuePseudoQueue("C");
+//        System.out.println("after enqueue : ===>  " + myPseudoQueue);
+//        myPseudoQueue.enqueuePseudoQueue("D");
+//        System.out.println(" after enqueue : (D) ===>  " + myPseudoQueue);
+//        myPseudoQueue.enqueuePseudoQueue("W");
+//        System.out.println(" after enqueue : (W) ===>  " + myPseudoQueue);
+//
+//        System.out.println("\n*****************     dequeue     **********************\n");
+//        PseudoQueue<String> myPseudoQueue1 = new PseudoQueue<>();
+//        System.out.println(" after dequeue (stack empty) :  ===>  " + myPseudoQueue1.dequeuePseudoQueue() );
+//
+//
+//        myPseudoQueue1.enqueuePseudoQueue("X");
+//        myPseudoQueue1.enqueuePseudoQueue("Y");
+//        myPseudoQueue1.enqueuePseudoQueue("Z");
+//        System.out.println(" after enqueue :  ===>  " + myPseudoQueue1 +"   top = " +myPseudoQueue1.peek());
+//        System.out.println("decueue node  ===>  "+ myPseudoQueue1.dequeuePseudoQueue());
+//        System.out.println( "decueue node  ===>  "+myPseudoQueue1.dequeuePseudoQueue());
+//        System.out.println( "decueue node  ===>  "+myPseudoQueue1.dequeuePseudoQueue());
+
 }
 
