@@ -1,8 +1,11 @@
 
+
 package stackAndQueue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.EmptyStackException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,209 +13,12 @@ class AppTest {
     Stack<String> newStack = new Stack<>();
     Queue<String> newQueue = new Queue<>();
     PseudoQueue<String> myPseudoQueue = new PseudoQueue<>();
-    ValidateBrackets obj = new ValidateBrackets();
-    Stack<Integer> stack = new Stack<>();
 
     @BeforeEach
     void setUp() {
         newStack = new Stack();
         newQueue = new Queue<>();
     }
-    ////////// lab 14 ///////////////////
-
-    @Test void getMaxTest() throws Exception {
-        stack.push(2);
-        assertEquals( stack.getMax(),2);
-    }
-    @Test void getMaxTest1() throws Exception {
-        stack.push(2);
-        stack.pop();
-        assertEquals( stack.getMax(),0);
-    }
-    @Test void getMaxTest2() throws Exception {
-        stack.push(2);
-        stack.push(5);
-        stack.push(3);
-
-        assertEquals( stack.getMax(),5);
-    }
-    @Test void getMaxTest3() throws Exception {
-        stack.push(7);
-        stack.push(5);
-        stack.push(3);
-
-        assertEquals( stack.getMax(),7);
-    }
-    @Test void getMaxTest4() throws Exception {
-        stack.push(1);
-        stack.push(5);
-        stack.push(7);
-
-        assertEquals( stack.getMax(),7);
-    }
-
-
-
-
-
-
-
-    /////////////////////////////// lab 13 ///////////////////////////////////////
-
-    // test if string is Empty
-    @Test void validBracketsTest()
-    {
-        assertEquals( obj.validateBrackets(""), false);
-    }
-
-    // test if just pair of brackets in balanced order
-    @Test void validBracketsTest1()
-    {
-        assertEquals(obj.validateBrackets("{}"), true);
-    }
-    // test if multiple pairs of brackets in balanced order
-    @Test void validBracketsTest2()
-    {
-        assertEquals(obj.validateBrackets("(){}[]"), true);
-    }
-    // test if multiple pairs of brackets has nested pairs in balanced order
-    @Test void validBracketsTest4()
-    {
-        assertEquals(obj.validateBrackets("(){()}[]"), true);
-    }
-    // test if multiple pairs of brackets has nested pairs in balanced order and contains other characters
-    @Test void validBracketsTest3()
-    {
-        assertEquals(obj.validateBrackets("{}{Code}[Fellows](())"), true);
-    }
-    // test if not contain brackets (String of characters
-    // in this case Stack is Empty
-    @Test void validBracketsTest5()
-    {
-        assertEquals(obj.validateBrackets("CodeFellows"), false);
-    }
-    // test if just pair of brackets not in balanced order
-    @Test void validBracketsTest6()
-    {
-        assertEquals(obj.validateBrackets("{)"), false);
-    }
-    // test if multiple pairs of brackets not in balanced order
-    @Test void validBracketsTest7()
-    {
-        assertEquals(obj.validateBrackets("(){][]"), false);
-    }
-    // test if multiple pairs of brackets has nested pairs not in balanced order
-    @Test void validBracketsTest8()
-    {
-        assertEquals(obj.validateBrackets("(){(}}[]"), false);
-    }
-    // test if multiple pairs of brackets has nested pairs not in balanced order and contains other characters
-    @Test void validBracketsTest9()
-    {
-        assertEquals(obj.validateBrackets("{}{Code}[Fellows]({))"), false);
-    }
-    // test if contains a single opening bracket
-    @Test void validBracketsTest10()
-    {
-        assertEquals(obj.validateBrackets("{"), false);
-    }
-    //  // test if contains odd number of bracket
-        @Test void validBracketsTest11()
-        {
-            assertEquals(obj.validateBrackets("{((})"), false);
-        }
-    //  // test if contains single closing  bracket
-    @Test void validBracketsTest13()
-    {
-        assertEquals(obj.validateBrackets("]"), false);
-    }
-    //  // test if contains single closing bracket with other characters
-    @Test void validBracketsTest14()
-    {
-        assertEquals(obj.validateBrackets("Elien]"), false);
-    }
-    //  // test if contains single opening bracket with other characters
-    @Test void validBracketsTest15()
-    {
-        assertEquals(obj.validateBrackets("Elien("), false);
-    }
-
-
-
-
-
-
-
-
-/////////////// lab 12 /////////////
-    // Test enqueue on dogs queue
-    @Test void AnimalEnqueueDogs(){
-        AnimalShelter allAnimals = new AnimalShelter();
-        Dog dog = new Dog("dog1");
-        allAnimals.enqueue(dog);
-        Dog dog2 = new Dog("dog2");
-        allAnimals.enqueue(dog2);
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->frontsize = 0, dogsQueue=Queue{ back->{Dog}->{Dog}->frontsize = 2}");
-    }
-    // Test enqueue on dogs queue
-    @Test void AnimalEnqueueCats(){
-        AnimalShelter allAnimals = new AnimalShelter();
-        Cat cat = new Cat("cat1");
-        allAnimals.enqueue(cat);
-        Cat cat1 = new Cat("cat2");
-        allAnimals.enqueue(cat1);
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->{Cat}->frontsize = 2, dogsQueue=Queue{ back->frontsize = 0}");
-    }
-    // Test enqueue on both cats and dogs
-    @Test void AnimalEnqueueCatsDogs(){
-        AnimalShelter allAnimals = new AnimalShelter();
-        Cat cat = new Cat("cat1");
-        allAnimals.enqueue(cat);
-        Dog dog2 = new Dog("dog2");
-        allAnimals.enqueue(dog2);
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->frontsize = 1, dogsQueue=Queue{ back->{Dog}->frontsize = 1}");
-    }// test if dequeu cats
-    @Test void AnimaldequeueCats() throws Exception {
-        AnimalShelter allAnimals = new AnimalShelter();
-        Cat cat = new Cat("cat1");
-        allAnimals.enqueue(cat);
-        Dog dog2 = new Dog("dog2");
-        allAnimals.enqueue(dog2);
-        allAnimals.deQueue("dog");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->frontsize = 1, dogsQueue=Queue{ back->{Dog}->frontsize = 0}");
-    }// test if dequeu dog
-    @Test void AnimaldequeueDogs() throws Exception {
-        AnimalShelter allAnimals = new AnimalShelter();
-        Cat cat = new Cat("cat1");
-        allAnimals.enqueue(cat);
-        Dog dog2 = new Dog("dog2");
-        allAnimals.enqueue(dog2);
-        allAnimals.deQueue("dog");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->frontsize = 1, dogsQueue=Queue{ back->{Dog}->frontsize = 0}");
-    }
-
-    //dequeue dog if dogs queue is empty
-    @Test void dequeueDogsEmpty() throws Exception {
-        AnimalShelter allAnimals = new AnimalShelter();
-        Cat cat = new Cat("cat1");
-        allAnimals.enqueue(cat);
-        Cat cat2 = new Cat("cat2");
-        allAnimals.enqueue(cat2);
-        allAnimals.deQueue("dog");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->{Cat}->frontsize = 2, dogsQueue=Queue{ back->frontsize = 0}");
-    }
-    //dequeue cat if cats queue is empty
-    @Test void dequeueCatsEmpty() throws Exception {
-        AnimalShelter allAnimals = new AnimalShelter();
-        Dog dog = new Dog("dog1");
-        allAnimals.enqueue(dog);
-        Dog dog2 = new Dog("dog2");
-        allAnimals.enqueue(dog2);
-        allAnimals.deQueue("cat");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->frontsize = 0, dogsQueue=Queue{ back->{Dog}->{Dog}->frontsize = 2}");
-    }
-
-
 
     /////////// tests for lab 11
 
@@ -227,7 +33,7 @@ class AppTest {
     {
         myPseudoQueue.enqueuePseudoQueue("A");
         myPseudoQueue.enqueuePseudoQueue("B");
-        assertEquals(myPseudoQueue.toString(), "PseudoQueue{ back->{B}->{A}->front");
+        assertEquals(myPseudoQueue.toString(), "PseudoQueue{firstStack=Stack{top=Node{value=B}, next=Node{value=A}, next=null}   {sizeOStack = 2}, secondStackTemp=Stack{top=null}   {sizeOStack = 0}, backPointer=Node{value=B}, next=Node{value=A}, next=null, frontPointer=Node{value=A}, next=null, size=2}");
     }
     // test enqueue  if psudeoQueue has multiple nodes
     @Test void psudeoQueueEnqueueTest3()
@@ -236,7 +42,7 @@ class AppTest {
         myPseudoQueue.enqueuePseudoQueue("B");
         myPseudoQueue.enqueuePseudoQueue("C");
         myPseudoQueue.enqueuePseudoQueue("D");
-        assertEquals(myPseudoQueue.toString(), "PseudoQueue{ back->{D}->{C}->{B}->{A}->front");
+        assertEquals(myPseudoQueue.toString(), "PseudoQueue{firstStack=Stack{top=Node{value=D}, next=Node{value=C}, next=Node{value=B}, next=Node{value=A}, next=null}   {sizeOStack = 4}, secondStackTemp=Stack{top=null}   {sizeOStack = 0}, backPointer=Node{value=D}, next=Node{value=C}, next=Node{value=B}, next=Node{value=A}, next=null, frontPointer=Node{value=A}, next=null, size=4}");
     }
     // test dequeue if psudeoQueue is empty // it will be exception
     @Test void psudeoQueueDequeueTest () throws Exception {
@@ -324,7 +130,7 @@ class AppTest {
     void testEnqueue2values() {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
-        assertEquals(newQueue.toString(),"Queue{ back->{Sadan}->{Manar}->frontsize = 2");
+        assertEquals(newQueue.toString(),"Queue{back=Node{value=Sadan}, next=Node{value=Manar}, next=null, front=Node{value=Manar}, next=null, size=2}");
     }
     //Can successfully dequeue out of a queue the expected value
     @Test
@@ -332,7 +138,7 @@ class AppTest {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
         newQueue.dequeue();
-        assertEquals(newQueue.toString(),"Queue{ back->{Sadan}->{Manar}->frontsize = 1");
+        assertEquals(newQueue.toString(),"Queue{back=Node{value=Sadan}, next=null, front=Node{value=Sadan}, next=null, size=1}");
     }
     //Can successfully peek into a queue, seeing the expected value
     @Test
@@ -347,7 +153,7 @@ class AppTest {
     void testEmptyQueue() throws Exception {
         newQueue.enqueue("Manar");
         newQueue.dequeue();
-        assertEquals(newQueue.isEmpty(),false);
+        assertEquals(newQueue.isEmpty(),true);
     }
     //Can successfully instantiate an empty queue
     @Test
@@ -361,3 +167,4 @@ class AppTest {
 
     }
 }
+// 

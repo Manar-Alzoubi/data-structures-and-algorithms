@@ -1,69 +1,54 @@
 
+
 package stackAndQueue;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
+      
+        System.out.println("\n -----------------  Here is the stack ----------------------- ");
+        Stack<String> myStack = new Stack();
+        if (myStack.isEempty()) {
+            System.out.println("The stack is empty");
+        }
 
-      /////// code 14 ///////////////
+        System.out.println("push to the stack");
+        myStack.push("Manar"); // first node
+        myStack.push("Alaa");
+        myStack.push("Sadan"); // last node
+
+        System.out.println(myStack);
+        System.out.println("peek ==> " + myStack.peek());
+        System.out.println("pop ==> " + myStack.pop());
+        System.out.println(myStack);
+
+        System.out.println("\n");
+
+        System.out.println(" -----------------  Here is the Queue ----------------------- ");
+
+        Queue<String> myQueue = new Queue();
+        if (myQueue.isEmpty()) {
+            System.out.println("the queue is empty");
+        } else {
+            System.out.println(myQueue);
+        }
+
+        myQueue.enqueue("Mohammad"); // first in
+        myQueue.enqueue("Ahmad");
+        myQueue.enqueue("Omar");
+        myQueue.enqueue("Ali"); // last in
+        System.out.println("add to queue (enqueue) ==>  "+myQueue);
+        System.out.println("the peek of queue (peek) ==> "+ myQueue.peek());
+        System.out.println("remove element : (dequeue ) ==>  "+ myQueue.dequeue());
+        System.out.println(myQueue);
 
 
-        Stack<Integer> stack= new Stack();
-        stack.push(5);
-        stack.push(2);
-        stack.push(7);
-        stack.push(9);
-        stack.push(2);
-      System.out.println("max num is ==>  "+ stack.getMax());
-
-
-
-
-
-
-//      ValidateBrackets isValid = new ValidateBrackets();
-//
-//        System.out.println("{}  ==> " + isValid.validateBrackets("{}"));
-//        System.out.println("{}(){}  ==> " + isValid.validateBrackets("{}(){}"));
-//        System.out.println("()[[Extra Characters]]  ==> " + isValid.validateBrackets("()[[Extra Characters]]"));
-//        System.out.println("(){}[[]]  ==> " + isValid.validateBrackets("(){}[[]]"));
-//        System.out.println("{}{Code}[Fellows](())  ==> " + isValid.validateBrackets("{}{Code}[Fellows](())"));
-//        System.out.println("[({}]  ==> " + isValid.validateBrackets("[({}]"));
-//        System.out.println("(](  ==> " + isValid.validateBrackets("(]("));
-//        System.out.println("{(})  ==> " + isValid.validateBrackets("{(})"));
-//        System.out.println("(  ==> " + isValid.validateBrackets("("));
-//        System.out.println("}  ==> " + isValid.validateBrackets("}"));
-//        System.out.println("(} ==> " + isValid.validateBrackets("(}"));
-//        System.out.println("(Sadan} ==> " + isValid.validateBrackets("(Sadan}"));
-//        System.out.println("(Sa]dan} ==> " + isValid.validateBrackets("(Sa]dan}"));
-
-//        AnimalShelter allAnimals = new AnimalShelter();
-//        Dog dog = new Dog("dog1");
-//        allAnimals.enqueue(dog);
-//        Dog dog2 = new Dog("dog2");
-//        allAnimals.enqueue(dog2);
-//        System.out.println(allAnimals.toString());
-//        Cat cat = new Cat("cat1");
-//        allAnimals.enqueue(cat);
-//        Cat cat1 = new Cat("cat2");
-//        allAnimals.enqueue(cat1);
-//        System.out.println(allAnimals);
-//
-//
-//        System.out.println(" dequeue ==>  " + allAnimals.deQueue("cat"));
-//
-//        System.out.println("dequeue  ==>  " + allAnimals.deQueue("dog"));
-//
-//        System.out.println(allAnimals);
     }
 
 
 
-
-
-
-
-
+      
+      
 
 //        System.out.println("\n ---------  Here is the PseudoQueue (queue using 2 stacks) ------- \n");
 //
@@ -91,46 +76,5 @@ public class App {
 //        System.out.println( "decueue node  ===>  "+myPseudoQueue1.dequeuePseudoQueue());
 //        System.out.println( "decueue node  ===>  "+myPseudoQueue1.dequeuePseudoQueue());
 
-
-
-
-//        System.out.println("\n -----------------  Here is the stack ----------------------- ");
-//        Stack<String> myStack = new Stack();
-//        if (myStack.isEempty()) {
-//            System.out.println("The stack is empty");
-//        }
-//
-//        System.out.println("push to the stack");
-//        myStack.push("Manar"); // first node
-//        myStack.push("Alaa");
-//        myStack.push("Sadan"); // last node
-//
-//        System.out.println(myStack);
-//        System.out.println("peek ==> " + myStack.peek());
-//        System.out.println("pop ==> " + myStack.pop());
-//        System.out.println(myStack);
-//
-//        System.out.println("\n");
-//
-//        System.out.println(" -----------------  Here is the Queue ----------------------- ");
-//
-//        Queue<String> myQueue = new Queue();
-//        if (myQueue.isEmpty()) {
-//            System.out.println("the queue is empty");
-//        } else {
-//            System.out.println(myQueue);
-//        }
-//
-//        myQueue.enqueue("Mohammad"); // first in
-//        myQueue.enqueue("Ahmad");
-//        myQueue.enqueue("Omar");
-//        myQueue.enqueue("Ali"); // last in
-//        System.out.println("add to queue (enqueue) ==>  "+myQueue);
-//        System.out.println("the peek of queue (peek) ==> "+ myQueue.peek());
-//        System.out.println("remove element : (dequeue ) ==>  "+ myQueue.dequeue());
-//        System.out.println(myQueue);
-
-
-    }
-
+}
 
