@@ -24,11 +24,19 @@ class AppTest {
 
     /////////////////////////////// lab 13 ///////////////////////////////////////
 
-//     // test if string is Empty
-//     @Test void validBracketsTest()
-//     {
-//         assertEquals( obj.validateBrackets(""), false);
-//     }
+
+    // test if string is Empty
+    @Test void validBracketsTest()
+    {
+        try{
+            obj.validateBrackets("");
+        }catch(Exception e )
+        {
+            System.err.println("exception");
+        }
+//        assertEquals( obj.validateBrackets(""), false);
+    }
+
 
 //     // test if just pair of brackets in balanced order
 //     @Test void validBracketsTest1()

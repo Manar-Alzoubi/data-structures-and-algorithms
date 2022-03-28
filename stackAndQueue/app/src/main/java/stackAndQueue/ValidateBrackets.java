@@ -4,9 +4,13 @@ public class ValidateBrackets {
 
     public boolean validateBrackets(String str )
     {
+
         Stack<Character> stack= new Stack();
         char charToCheck =0;
-        if( str.length() == 0  || str.length() == 1 || str == null )
+        if (str.length() == 0){
+            throw new IllegalStateException();
+        }
+        if( str.length() == 1 || str == null )
             return false;
         else {
         for (int i =0; i< str.length(); i++) {
