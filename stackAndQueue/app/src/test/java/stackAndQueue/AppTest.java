@@ -1,9 +1,12 @@
 
+
 package stackAndQueue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
+import java.util.EmptyStackException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -12,90 +15,92 @@ class AppTest {
     PseudoQueue<String> myPseudoQueue = new PseudoQueue<>();
     ValidateBrackets obj = new ValidateBrackets();
 
+
     @BeforeEach
     void setUp() {
         newStack = new Stack();
         newQueue = new Queue<>();
     }
+
     /////////////////////////////// lab 13 ///////////////////////////////////////
 
-    // test if string is Empty
-    @Test void validBracketsTest()
-    {
-        assertEquals( obj.validateBrackets(""), false);
-    }
+//     // test if string is Empty
+//     @Test void validBracketsTest()
+//     {
+//         assertEquals( obj.validateBrackets(""), false);
+//     }
 
-    // test if just pair of brackets in balanced order
-    @Test void validBracketsTest1()
-    {
-        assertEquals(obj.validateBrackets("{}"), true);
-    }
-    // test if multiple pairs of brackets in balanced order
-    @Test void validBracketsTest2()
-    {
-        assertEquals(obj.validateBrackets("(){}[]"), true);
-    }
-    // test if multiple pairs of brackets has nested pairs in balanced order
-    @Test void validBracketsTest4()
-    {
-        assertEquals(obj.validateBrackets("(){()}[]"), true);
-    }
-    // test if multiple pairs of brackets has nested pairs in balanced order and contains other characters
-    @Test void validBracketsTest3()
-    {
-        assertEquals(obj.validateBrackets("{}{Code}[Fellows](())"), true);
-    }
-    // test if not contain brackets (String of characters
-    // in this case Stack is Empty
-    @Test void validBracketsTest5()
-    {
-        assertEquals(obj.validateBrackets("CodeFellows"), false);
-    }
-    // test if just pair of brackets not in balanced order
-    @Test void validBracketsTest6()
-    {
-        assertEquals(obj.validateBrackets("{)"), false);
-    }
-    // test if multiple pairs of brackets not in balanced order
-    @Test void validBracketsTest7()
-    {
-        assertEquals(obj.validateBrackets("(){][]"), false);
-    }
-    // test if multiple pairs of brackets has nested pairs not in balanced order
-    @Test void validBracketsTest8()
-    {
-        assertEquals(obj.validateBrackets("(){(}}[]"), false);
-    }
-    // test if multiple pairs of brackets has nested pairs not in balanced order and contains other characters
-    @Test void validBracketsTest9()
-    {
-        assertEquals(obj.validateBrackets("{}{Code}[Fellows]({))"), false);
-    }
-    // test if contains a single opening bracket
-    @Test void validBracketsTest10()
-    {
-        assertEquals(obj.validateBrackets("{"), false);
-    }
-    //  // test if contains odd number of bracket
-        @Test void validBracketsTest11()
-        {
-            assertEquals(obj.validateBrackets("{((})"), false);
-        }
-    //  // test if contains single closing  bracket
-    @Test void validBracketsTest13()
-    {
-        assertEquals(obj.validateBrackets("]"), false);
-    }
-    //  // test if contains single closing bracket with other characters
-    @Test void validBracketsTest14()
-    {
-        assertEquals(obj.validateBrackets("Elien]"), false);
-    }
-    //  // test if contains single opening bracket with other characters
-    @Test void validBracketsTest15()
-    {
-        assertEquals(obj.validateBrackets("Elien("), false);
-    }
+//     // test if just pair of brackets in balanced order
+//     @Test void validBracketsTest1()
+//     {
+//         assertEquals(obj.validateBrackets("{}"), true);
+//     }
+//     // test if multiple pairs of brackets in balanced order
+//     @Test void validBracketsTest2()
+//     {
+//         assertEquals(obj.validateBrackets("(){}[]"), true);
+//     }
+//     // test if multiple pairs of brackets has nested pairs in balanced order
+//     @Test void validBracketsTest4()
+//     {
+//         assertEquals(obj.validateBrackets("(){()}[]"), true);
+//     }
+//     // test if multiple pairs of brackets has nested pairs in balanced order and contains other characters
+//     @Test void validBracketsTest3()
+//     {
+//         assertEquals(obj.validateBrackets("{}{Code}[Fellows](())"), true);
+//     }
+//     // test if not contain brackets (String of characters
+//     // in this case Stack is Empty
+//     @Test void validBracketsTest5()
+//     {
+//         assertEquals(obj.validateBrackets("CodeFellows"), false);
+//     }
+//     // test if just pair of brackets not in balanced order
+//     @Test void validBracketsTest6()
+//     {
+//         assertEquals(obj.validateBrackets("{)"), false);
+//     }
+//     // test if multiple pairs of brackets not in balanced order
+//     @Test void validBracketsTest7()
+//     {
+//         assertEquals(obj.validateBrackets("(){][]"), false);
+//     }
+//     // test if multiple pairs of brackets has nested pairs not in balanced order
+//     @Test void validBracketsTest8()
+//     {
+//         assertEquals(obj.validateBrackets("(){(}}[]"), false);
+//     }
+//     // test if multiple pairs of brackets has nested pairs not in balanced order and contains other characters
+//     @Test void validBracketsTest9()
+//     {
+//         assertEquals(obj.validateBrackets("{}{Code}[Fellows]({))"), false);
+//     }
+//     // test if contains a single opening bracket
+//     @Test void validBracketsTest10()
+//     {
+//         assertEquals(obj.validateBrackets("{"), false);
+//     }
+//     //  // test if contains odd number of bracket
+//         @Test void validBracketsTest11()
+//         {
+//             assertEquals(obj.validateBrackets("{((})"), false);
+//         }
+//     //  // test if contains single closing  bracket
+//     @Test void validBracketsTest13()
+//     {
+//         assertEquals(obj.validateBrackets("]"), false);
+//     }
+//     //  // test if contains single closing bracket with other characters
+//     @Test void validBracketsTest14()
+//     {
+//         assertEquals(obj.validateBrackets("Elien]"), false);
+//     }
+//     //  // test if contains single opening bracket with other characters
+//     @Test void validBracketsTest15()
+//     {
+//         assertEquals(obj.validateBrackets("Elien("), false);
+//     }
 
 
 
@@ -174,6 +179,7 @@ class AppTest {
 
 
 
+
     /////////// tests for lab 11
 
     // test if psudeoQueue is empty
@@ -187,7 +193,7 @@ class AppTest {
     {
         myPseudoQueue.enqueuePseudoQueue("A");
         myPseudoQueue.enqueuePseudoQueue("B");
-        assertEquals(myPseudoQueue.toString(), "PseudoQueue{ back->{B}->{A}->front");
+        assertEquals(myPseudoQueue.toString(), "PseudoQueue{firstStack=Stack{top=Node{value=B}, next=Node{value=A}, next=null}   {sizeOStack = 2}, secondStackTemp=Stack{top=null}   {sizeOStack = 0}, backPointer=Node{value=B}, next=Node{value=A}, next=null, frontPointer=Node{value=A}, next=null, size=2}");
     }
     // test enqueue  if psudeoQueue has multiple nodes
     @Test void psudeoQueueEnqueueTest3()
@@ -196,7 +202,7 @@ class AppTest {
         myPseudoQueue.enqueuePseudoQueue("B");
         myPseudoQueue.enqueuePseudoQueue("C");
         myPseudoQueue.enqueuePseudoQueue("D");
-        assertEquals(myPseudoQueue.toString(), "PseudoQueue{ back->{D}->{C}->{B}->{A}->front");
+        assertEquals(myPseudoQueue.toString(), "PseudoQueue{firstStack=Stack{top=Node{value=D}, next=Node{value=C}, next=Node{value=B}, next=Node{value=A}, next=null}   {sizeOStack = 4}, secondStackTemp=Stack{top=null}   {sizeOStack = 0}, backPointer=Node{value=D}, next=Node{value=C}, next=Node{value=B}, next=Node{value=A}, next=null, frontPointer=Node{value=A}, next=null, size=4}");
     }
     // test dequeue if psudeoQueue is empty // it will be exception
     @Test void psudeoQueueDequeueTest () throws Exception {
@@ -284,7 +290,9 @@ class AppTest {
     void testEnqueue2values() {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
+
         assertEquals(newQueue.toString(),"Queue{back=  Node{value=Sadan}, next=Node{value=Manar}, next=null, front=  Node{value=Manar}, next=null, size=  2}");
+
     }
     //Can successfully dequeue out of a queue the expected value
     @Test
@@ -292,7 +300,9 @@ class AppTest {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
         newQueue.dequeue();
+
         assertEquals(newQueue.toString(),"Queue{back=  Node{value=Sadan}, next=null, front=  Node{value=Sadan}, next=null, size=  1}");
+
     }
     //Can successfully peek into a queue, seeing the expected value
     @Test
@@ -321,3 +331,4 @@ class AppTest {
 
     }
 }
+
