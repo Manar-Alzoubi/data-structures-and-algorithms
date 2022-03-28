@@ -49,14 +49,15 @@ public class Queue<T> {
     }
 
     // Removes the node from the front of the queue
-
     public Node dequeue() {
         Node frontTemp = back;
         Node temp;
         if (front == null) {// if queue is empty
             return null;}
         if (front == back) {// if queue has one node
-             temp = front;
+
+            temp = front;
+
             front = back = null;
             size--;
             return temp;
@@ -74,6 +75,7 @@ public class Queue<T> {
         return frontTemp;
     }
 
+
     // Returns Value of the node located at the front of the queue
     public T peek() {
         if (isEmpty()) {
@@ -90,12 +92,13 @@ public class Queue<T> {
 
     @Override
     public String toString() {
-
         return "Queue{" +
-                "back=" + back +
-                ", front=" + front +
-                ", size=" + size +
+                "back=  " + back +
+                ", front=  " + front +
+                ", size=  " + size +
                 '}';
+
+
     }
 //    @Override
 //    public String toString() {
