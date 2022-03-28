@@ -112,7 +112,7 @@ class AppTest {
         allAnimals.enqueue(dog);
         Dog dog2 = new Dog("dog2");
         allAnimals.enqueue(dog2);
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->frontsize = 0, dogsQueue=Queue{ back->{Dog}->{Dog}->frontsize = 2}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  null, front=  null, size=  0}, dogsQueue=Queue{back=  Node{value=Dog}, next=Node{value=Dog}, next=null, front=  Node{value=Dog}, next=null, size=  2}}");
     }
     // Test enqueue on dogs queue
     @Test void AnimalEnqueueCats(){
@@ -121,7 +121,7 @@ class AppTest {
         allAnimals.enqueue(cat);
         Cat cat1 = new Cat("cat2");
         allAnimals.enqueue(cat1);
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->{Cat}->frontsize = 2, dogsQueue=Queue{ back->frontsize = 0}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  Node{value=Cat}, next=Node{value=Cat}, next=null, front=  Node{value=Cat}, next=null, size=  2}, dogsQueue=Queue{back=  null, front=  null, size=  0}}");
     }
     // Test enqueue on both cats and dogs
     @Test void AnimalEnqueueCatsDogs(){
@@ -130,7 +130,7 @@ class AppTest {
         allAnimals.enqueue(cat);
         Dog dog2 = new Dog("dog2");
         allAnimals.enqueue(dog2);
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->frontsize = 1, dogsQueue=Queue{ back->{Dog}->frontsize = 1}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  Node{value=Cat}, next=null, front=  Node{value=Cat}, next=null, size=  1}, dogsQueue=Queue{back=  Node{value=Dog}, next=null, front=  Node{value=Dog}, next=null, size=  1}}");
     }// test if dequeu cats
     @Test void AnimaldequeueCats() throws Exception {
         AnimalShelter allAnimals = new AnimalShelter();
@@ -139,7 +139,7 @@ class AppTest {
         Dog dog2 = new Dog("dog2");
         allAnimals.enqueue(dog2);
         allAnimals.deQueue("dog");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->frontsize = 1, dogsQueue=Queue{ back->{Dog}->frontsize = 0}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  Node{value=Cat}, next=null, front=  Node{value=Cat}, next=null, size=  1}, dogsQueue=Queue{back=  null, front=  null, size=  0}}");
     }// test if dequeu dog
     @Test void AnimaldequeueDogs() throws Exception {
         AnimalShelter allAnimals = new AnimalShelter();
@@ -148,7 +148,7 @@ class AppTest {
         Dog dog2 = new Dog("dog2");
         allAnimals.enqueue(dog2);
         allAnimals.deQueue("dog");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->frontsize = 1, dogsQueue=Queue{ back->{Dog}->frontsize = 0}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  Node{value=Cat}, next=null, front=  Node{value=Cat}, next=null, size=  1}, dogsQueue=Queue{back=  null, front=  null, size=  0}}");
     }
 
     //dequeue dog if dogs queue is empty
@@ -159,7 +159,7 @@ class AppTest {
         Cat cat2 = new Cat("cat2");
         allAnimals.enqueue(cat2);
         allAnimals.deQueue("dog");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->{Cat}->{Cat}->frontsize = 2, dogsQueue=Queue{ back->frontsize = 0}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  Node{value=Cat}, next=Node{value=Cat}, next=null, front=  Node{value=Cat}, next=null, size=  2}, dogsQueue=Queue{back=  null, front=  null, size=  0}}");
     }
     //dequeue cat if cats queue is empty
     @Test void dequeueCatsEmpty() throws Exception {
@@ -169,7 +169,7 @@ class AppTest {
         Dog dog2 = new Dog("dog2");
         allAnimals.enqueue(dog2);
         allAnimals.deQueue("cat");
-        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{ back->frontsize = 0, dogsQueue=Queue{ back->{Dog}->{Dog}->frontsize = 2}");
+        assertEquals(allAnimals.toString(),"AnimalShelter{catsQueue=Queue{back=  null, front=  null, size=  0}, dogsQueue=Queue{back=  Node{value=Dog}, next=Node{value=Dog}, next=null, front=  Node{value=Dog}, next=null, size=  2}}");
     }
 
 
@@ -284,7 +284,7 @@ class AppTest {
     void testEnqueue2values() {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
-        assertEquals(newQueue.toString(),"Queue{ back->{Sadan}->{Manar}->frontsize = 2");
+        assertEquals(newQueue.toString(),"Queue{back=  Node{value=Sadan}, next=Node{value=Manar}, next=null, front=  Node{value=Manar}, next=null, size=  2}");
     }
     //Can successfully dequeue out of a queue the expected value
     @Test
@@ -292,7 +292,7 @@ class AppTest {
         newQueue.enqueue("Manar");
         newQueue.enqueue("Sadan");
         newQueue.dequeue();
-        assertEquals(newQueue.toString(),"Queue{ back->{Sadan}->{Manar}->frontsize = 1");
+        assertEquals(newQueue.toString(),"Queue{back=  Node{value=Sadan}, next=null, front=  Node{value=Sadan}, next=null, size=  1}");
     }
     //Can successfully peek into a queue, seeing the expected value
     @Test
@@ -307,7 +307,7 @@ class AppTest {
     void testEmptyQueue() throws Exception {
         newQueue.enqueue("Manar");
         newQueue.dequeue();
-        assertEquals(newQueue.isEmpty(),false);
+        assertEquals(newQueue.isEmpty(),true);
     }
     //Can successfully instantiate an empty queue
     @Test
