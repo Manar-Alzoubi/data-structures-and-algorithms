@@ -34,23 +34,23 @@ public class App {
 
 
 
-//        System.out.println("\n -----------------  Here is the stack ----------------------- ");
-//        Stack<String> myStack = new Stack();
-//        if (myStack.isEempty()) {
-//            System.out.println("The stack is empty");
-//        }
-//
-//        System.out.println("push to the stack");
-//        myStack.push("Manar"); // first node
-//        myStack.push("Alaa");
-//        myStack.push("Sadan"); // last node
-//
-//        System.out.println(myStack);
-//        System.out.println("peek ==> " + myStack.peek());
-//        System.out.println("pop ==> " + myStack.pop());
-//        System.out.println(myStack);
-//
-//        System.out.println("\n");
+        System.out.println("\n -----------------  Here is the stack ----------------------- ");
+        Stack<String> myStack = new Stack();
+        if (myStack.isEempty()) {
+            System.out.println("The stack is empty");
+        }
+
+        System.out.println("push to the stack");
+        myStack.push("Manar"); // first node
+        myStack.push("Alaa");
+        myStack.push("Sadan"); // last node
+
+        System.out.println(myStack);
+        System.out.println("peek ==> " + myStack.peek());
+        System.out.println("pop ==> " + myStack.pop());
+        System.out.println(myStack);
+
+        System.out.println("\n");
 
         System.out.println(" -----------------  Here is the Queue ----------------------- ");
 
