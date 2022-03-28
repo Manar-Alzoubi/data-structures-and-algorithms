@@ -49,23 +49,28 @@ public class Queue<T> {
     }
 
     // Removes the node from the front of the queue
-    public T dequeue() throws Exception {
-        Node<T> Temp;
-        T frontTemp = front.getValue();
-        Temp =back;
-        if(!isEmpty()){// if not empty remove the element on top
-            while (Temp !=null) {
-
-                if (Temp.getNext() == front) {
-                    front = Temp;
-                    size--;
-                }
-                Temp = Temp.getNext();
-            }
-        }else{ // if empty throw exception
-            throw new Exception("The Queue is empty");
+    public Node dequeue() {
+        Node frontTemp = back;
+        Node temp;
+        if (front == null) {// if queue is empty
+            return null;}
+        if (front == back) {// if queue has one node
+             temp = front;
+            front = back = null;
+            size--;
+            return temp;
         }
-        return frontTemp;// the value from node from the front of the queue
+        while (frontTemp != null) {
+            if (frontTemp.getNext() == front) {
+                temp = front;
+                frontTemp.setNext(null);
+                front = frontTemp;
+                size--;
+                return temp;
+            }
+            frontTemp = frontTemp.getNext();
+        }
+        return frontTemp;
     }
 
     // Returns Value of the node located at the front of the queue
@@ -85,12 +90,14 @@ public class Queue<T> {
     @Override
     public String toString() {
         return "Queue{" +
-                "back=  " + back +
-                ", front=  " + front +
-                ", size=  " + size +
+                "back=" + back +
+                ", front=" + front +
+                ", size=" + size +
                 '}';
-
-//        String allQueueToPrint = " Queue {";
+    }
+//    @Override
+//    public String toString() {
+//        String allQueueToPrint = " Queue { back";
 //        Node<T> pointerAtCurrent;
 //        pointerAtCurrent =back;
 //        while (pointerAtCurrent !=null){
@@ -100,5 +107,5 @@ public class Queue<T> {
 //        allQueueToPrint=allQueueToPrint+"front";
 //
 //        return allQueueToPrint + "  {size = "+size +"}";
-    }
+//    }
 }
