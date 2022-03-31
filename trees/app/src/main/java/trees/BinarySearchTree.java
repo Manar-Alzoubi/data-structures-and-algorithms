@@ -6,12 +6,10 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T>{
 
 
     public void add(T value) {
-        if (isTreeEmpty()) {
-            Node<T> newNode = new Node<>(value) ;
-            root = newNode;
-        } else {
-            add(value,root);
-        }
+        Node<T> node = new Node<>(value) ;
+        if (isTreeEmpty())
+            root = node;
+         else add(value,root);
     }
 
     private void add(T value, Node<T> root) {

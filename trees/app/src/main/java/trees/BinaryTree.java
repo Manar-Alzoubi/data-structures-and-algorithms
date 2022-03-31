@@ -20,9 +20,39 @@ public class BinaryTree <T extends Comparable<T>>{
         this.root = root;
     }
 
+
+
+//    //////////////////  solution for code 16 ////////////
+
+    public int maximumValue(){
+        if(root == null)// if tree is empty , raise an exception
+            throw new IllegalArgumentException();
+
+        return maximumValue((Node) root, (Integer) root.getValue());// call fun recursevly
+    }
+
+    public int maximumValue(Node node, int max){
+        if(node == null)
+            return max;
+//        if(root.getLeft() == null && root.getRight() == null )
+//            return max = (int) root.getValue();
+        if(node.getLeft() != null) // if there is a left node call fun for it
+            max = maximumValue(node.getLeft(),max);
+
+        if(node.getRight() != null) //if there is a right node call fun for it
+            max = maximumValue(node.getRight(),max);
+
+        if((int) node.getValue() >= max) // if value of node grater than max
+            max = (int) node.getValue();// make max = value of node
+
+        return max;
+    }
+
+
+
     public ArrayList<T> preOrder(Node <T> root){
         if(root == null)
-            return  arrOfIn;// will be empty
+            return  arrOfIn;
         arrOfPre.add(root.value);
         if(root.getLeft() !=null){
             preOrder(root.getLeft());
@@ -30,13 +60,13 @@ public class BinaryTree <T extends Comparable<T>>{
         if(root.getRight()!=null){
             preOrder(root.getRight());
         }
-//        arrOfPre.add(root.value);
+
         return arrOfPre;
     }
 
     public ArrayList<T> inOrder(Node <T> root) {
         if(root == null)
-            return  arrOfIn;// will be empty
+            return  arrOfIn;
         if (root.left != null) {
             inOrder(root.left);
         }

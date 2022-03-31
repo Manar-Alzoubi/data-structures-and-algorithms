@@ -10,10 +10,94 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-//    @Test void appHasAGreeting() {
-//        App classUnderTest = new App();
-//        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-//    }
+        ////////////Tests for code 16 ////////////
+
+    // test if tree is empty // it will raise an exception
+        @Test void emptyTreeTest1 ()
+        {
+            BinaryTree <Integer> biTree = new BinaryTree<>();
+            try{
+                biTree.maximumValue();
+            }catch (Exception e )
+            {
+                System.err.println("tree is empty " );
+            }
+        }
+    // test if tree has one value (root) // returns the root
+    @Test void oneValueTreeTest1 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(52));
+        assertEquals(biTree.maximumValue(),52);
+    }
+    // test if tree has root and left of(root)// root is not max
+    @Test void twoValueTreeTest ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+        biTree.getRoot().setLeft(new Node<>(52));
+        assertEquals(biTree.maximumValue(),52);
+    }
+    // test if tree has root and left of(root)// root is max
+    @Test void twoValueTreeTest4 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(70));
+        biTree.getRoot().setLeft(new Node<>(2));
+        assertEquals(biTree.maximumValue(),70);
+    }
+    // test if tree has root and right of(root) // root is not max
+    @Test void twoValueTreeTest2 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+        biTree.getRoot().setRight(new Node<>(50));
+        assertEquals(biTree.maximumValue(),50);
+    }
+    // test if tree has root and right of(root) // root is max
+    @Test void twoValueTreeTest3 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(50));
+        biTree.getRoot().setRight(new Node<>(2));
+        assertEquals(biTree.maximumValue(),50);
+    }
+    // if tree has many nodes
+    @Test void twoValueTreeTest5 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().setRight( new Node<>(5));
+        biTree.getRoot().getLeft().setLeft(new Node<>(2));
+        biTree.getRoot().getLeft().setRight(new Node<>(6));
+        biTree.getRoot().getRight().setRight(new Node<>(9));
+        assertEquals(biTree.maximumValue(),9);
+    }
+    // if tree has many nodes // max is somewhere in the tree // not leaf node
+    @Test void twoValueTreeTest6 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().setRight( new Node<>(100));
+        biTree.getRoot().getLeft().setLeft(new Node<>(2));
+        biTree.getRoot().getLeft().setRight(new Node<>(6));
+        biTree.getRoot().getRight().setRight(new Node<>(9));
+        assertEquals(biTree.maximumValue(),100);
+    }
+    // if tree has many nodes // max is somewhere in the tree // max is leaf node
+    @Test void twoValueTreeTest7 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().setRight( new Node<>(5));
+        biTree.getRoot().getLeft().setLeft(new Node<>(2));
+        biTree.getRoot().getLeft().setRight(new Node<>(6));
+        biTree.getRoot().getRight().setRight(new Node<>(50));
+        assertEquals(biTree.maximumValue(),50);
+    }
     //test Can successfully instantiate an empty tree
     @Test void emptyTreeTest ()
     {
