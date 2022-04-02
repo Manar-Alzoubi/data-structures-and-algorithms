@@ -8,7 +8,7 @@
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![ max in Tree](/data-structures-and-algorithms/assets/tree.jpg)
+![ max in Tree](../assets/tree.jpg)
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 * declare an int value called max 
