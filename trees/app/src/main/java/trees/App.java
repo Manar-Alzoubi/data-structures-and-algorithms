@@ -10,11 +10,11 @@ public class App {
 
     public static void main(String[] args) {
 //        System.out.println(new App().getGreeting());
-        System.out.println("///////// code 16 /////// \n");
+        System.out.println("///////// code 17 /////// \n");
         BinaryTree <Integer> biTree = new BinaryTree<>();
-        biTree.setRoot(new Node<>(7));
+        biTree.setRoot(new Node<>(2));
 
-        biTree.getRoot().setLeft(new Node<>(2));
+        biTree.getRoot().setLeft(new Node<>(7));
         biTree.getRoot().setRight( new Node<>(5));
 
         biTree.getRoot().getLeft().setLeft(new Node<>(2));
@@ -24,7 +24,13 @@ public class App {
         biTree.getRoot().getLeft().getRight().setLeft(new Node<>(5));
         biTree.getRoot().getLeft().getRight().setRight(new Node<>(11));
         biTree.getRoot().getRight().getRight().setLeft(new Node<>(4));
-        System.out.println("max value of first tree -> "+ biTree.maximumValue());
+
+        System.out.println( biTree.breadthFirst(biTree.getRoot()));
+
+
+
+//        System.out.println("max value of first tree -> "+ biTree.maximumValue());
+
 
 
 //        System.out.println("//////////// here is binary tree /////////////");
@@ -39,7 +45,7 @@ public class App {
         biTree1.getRoot().getLeft().setRight(new Node<>(40));
         biTree1.getRoot().getRight().setLeft(new Node<>(45));
         biTree1.getRoot().getRight().setRight(new Node<>(50));
-        System.out.println("max value of second tree -> "+ biTree1.maximumValue());
+//        System.out.println("max value of second tree -> "+ biTree1.maximumValue());
 //        System.out.println(biTree);
 //        System.out.println("\n pre order ==>  "+biTree.preOrder(biTree.getRoot()));
 //        System.out.println("\n in order ==>  "+biTree.inOrder(biTree.getRoot()));

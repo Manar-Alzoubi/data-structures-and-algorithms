@@ -10,6 +10,96 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    ///////////// Tests for code 17 ////////////
+    // test if tree is empty // it will raise an exception
+    @Test void breadthemptyTreeTest ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        try{
+            biTree.breadthFirst(biTree.getRoot());
+        }catch (Exception e )
+        {
+            System.err.println("tree is empty " );
+        }
+    }
+    // test if tree has one node  one level (root)
+    @Test void breadthemptyTreeTest1 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        assertEquals(biTree.breadthFirst(biTree.getRoot()),arr);
+    }
+    // test if tree has 2 levels
+    @Test void breadthemptyTreeTest2 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().setRight( new Node<>(5));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        arr.add(7);
+        arr.add(5);
+        assertEquals(biTree.breadthFirst(biTree.getRoot()),arr);
+    }
+    // test if tree has multiple levels  levels
+    @Test void breadthemptyTreeTest3 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().setRight( new Node<>(5));
+        biTree.getRoot().getLeft().setLeft(new Node<>(2));
+        biTree.getRoot().getLeft().setRight(new Node<>(6));
+        biTree.getRoot().getRight().setRight(new Node<>(9));
+
+        biTree.getRoot().getLeft().getRight().setLeft(new Node<>(5));
+        biTree.getRoot().getLeft().getRight().setRight(new Node<>(11));
+        biTree.getRoot().getRight().getRight().setLeft(new Node<>(4));
+        ArrayList arr = new ArrayList();
+        arr.add(2);
+        arr.add(7);
+        arr.add(5);
+        arr.add(2);
+        arr.add(6);arr.add(9);arr.add(5);arr.add(11);arr.add(4);
+        assertEquals(biTree.breadthFirst(biTree.getRoot()),arr);
+    }
+    // test if all nodes has just left node (no right node)
+    @Test void breadthemptyTreeTest4 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().getLeft().setLeft( new Node<>(5));
+        biTree.getRoot().getLeft().getLeft().setLeft(new Node<>(3));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        arr.add(7);
+        arr.add(5);
+        arr.add(3);
+        assertEquals(biTree.breadthFirst(biTree.getRoot()),arr);
+    }
+    // test if all nodes has just right node (no left node)
+    @Test void breadthemptyTreeTest5 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+        biTree.getRoot().setRight(new Node<>(7));
+        biTree.getRoot().getRight().setRight( new Node<>(5));
+        biTree.getRoot().getRight().getRight().setRight(new Node<>(3));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        arr.add(7);
+        arr.add(5);
+        arr.add(3);
+        assertEquals(biTree.breadthFirst(biTree.getRoot()),arr);
+    }
+
+
+
+
         ////////////Tests for code 16 ////////////
 
     // test if tree is empty // it will raise an exception

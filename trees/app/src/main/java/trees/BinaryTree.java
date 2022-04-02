@@ -1,9 +1,11 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Queue; // Import Queue package
+
 
 public class BinaryTree <T extends Comparable<T>>{
-
     public Node<T> root;
      ArrayList<T> arrOfPre =new ArrayList<>();
      ArrayList<T> arrOfIn =new ArrayList<>();
@@ -20,6 +22,39 @@ public class BinaryTree <T extends Comparable<T>>{
         this.root = root;
     }
 
+    // code for code challenge 17
+
+public ArrayList<T> breadthFirst(Node <T> root) {
+        // using java's built-in queue
+    //https://www.section.io/engineering-education/introduction-to-built-in-data-structures-in-java/
+
+    //Since Queue is an interface, objects cannot be created of the type queue. We always need a class
+    // which extends this list in order to create an object. This type-safe queue can be defined as:
+    // Obj is the type of the object to be stored in Queue
+    //Queue<Obj> queue = new PriorityQueue<Obj> ();
+    //    Queue<T> queue = new LinkedList<>();; // Create new object
+
+    Queue<T> queue = new PriorityQueue<>();// Create new object
+    if(root == null)
+        throw  new IllegalStateException("tree is empty");
+    queue.add((T) root);
+    arrOfPost.add(root.value);
+    Node node;
+    while(!queue.isEmpty()){
+        node = (Node) queue.poll();
+        if(node.getLeft() != null) {
+            queue.add((T) node.getLeft());
+            arrOfPost.add((T) node.getLeft().getValue());
+        }
+        if(node.getRight() != null) {
+            queue.add((T) node.getRight());
+            arrOfPost.add((T) node.getRight().getValue());
+        }
+//        else System.out.println("empty tree"));
+    }
+//    System.out.println(queue);
+    return arrOfPost;
+    }
 
 
 //    //////////////////  solution for code 16 ////////////
