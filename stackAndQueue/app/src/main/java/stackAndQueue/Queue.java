@@ -55,7 +55,9 @@ public class Queue<T> {
         if (front == null) {// if queue is empty
             return null;}
         if (front == back) {// if queue has one node
+
             temp = front;
+
             front = back = null;
             size--;
             return temp;
@@ -96,5 +98,19 @@ public class Queue<T> {
                 ", size=  " + size +
                 '}';
 
+
     }
-}
+//    @Override
+//    public String toString() {
+//        String allQueueToPrint = " Queue { back";
+//        Node<T> pointerAtCurrent;
+//        pointerAtCurrent =back;
+//        while (pointerAtCurrent !=null){
+//            allQueueToPrint +="{"+ pointerAtCurrent.getValue()+"}->";
+//            pointerAtCurrent = pointerAtCurrent.getNext();
+//        }
+//        allQueueToPrint=allQueueToPrint+"front";
+//
+//        return allQueueToPrint + "  {size = "+size +"}";
+//    }
+

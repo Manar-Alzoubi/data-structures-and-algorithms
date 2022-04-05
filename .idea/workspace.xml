@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
+
       <change afterPath="$PROJECT_DIR$/trees/readme18.md" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trees/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/main/java/trees/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trees/app/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/main/java/trees/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trees/app/src/test/java/trees/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/test/java/trees/AppTest.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
