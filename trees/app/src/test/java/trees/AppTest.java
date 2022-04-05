@@ -10,6 +10,167 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    //////////// Tests For code 18 ///////////////
+    // test if tree is empty // it will raise an exception
+    @Test void fizzBuzzTreeTest ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        try{
+            biTree.fizzBuzzTree(biTree.getRoot());
+        }catch (Exception e )
+        {
+            System.err.println("tree is empty " );
+        }
+    }
+    // test if tree has one node (root) // divisable by 3 & 5
+    @Test void fizzBuzzTreeTest1 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+        ArrayList arr = new ArrayList();
+        arr.add("FizzBuzz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has one node (root) // divisable in 3
+    @Test void fizzBuzzTreeTest2 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(9));
+        ArrayList arr = new ArrayList();
+        arr.add("Fizz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has one node (root) // divisable in 5
+    @Test void fizzBuzzTreeTest3 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(25));
+        ArrayList arr = new ArrayList();
+        arr.add("Buzz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has one node (root) // not divisable by 5 or 3
+    @Test void fizzBuzzTreeTest4 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(7));
+        ArrayList arr = new ArrayList();
+        arr.add("7");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has multiple  nodes // contains all cases
+    @Test void fizzBuzzTreeTest5 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(3));
+
+        biTree.getRoot().setLeft(new Node<>(7));
+        biTree.getRoot().setRight( new Node<>(5));
+
+        biTree.getRoot().getLeft().setLeft(new Node<>(15));
+        biTree.getRoot().getLeft().setRight(new Node<>(25));
+        biTree.getRoot().getRight().setRight(new Node<>(9));
+        ArrayList arr = new ArrayList();
+        arr.add("Fizz");
+        arr.add("7");
+        arr.add("FizzBuzz");
+        arr.add("Buzz");
+        arr.add("Buzz");
+        arr.add("Fizz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has multiple  nodes // all not divisaple by 3 or 5
+    @Test void fizzBuzzTreeTest9 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+
+        biTree.getRoot().setLeft(new Node<>(9));
+        biTree.getRoot().setRight( new Node<>(15));
+
+        biTree.getRoot().getLeft().setLeft(new Node<>(20));
+
+        ArrayList arr = new ArrayList();
+        arr.add("2");
+        arr.add("Fizz");
+        arr.add("Buzz");
+        arr.add("FizzBuzz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has multiple  nodes // all divisaple by 5
+    @Test void fizzBuzzTreeTest6 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(5));
+
+        biTree.getRoot().setLeft(new Node<>(10));
+        biTree.getRoot().setRight( new Node<>(20));
+
+        biTree.getRoot().getLeft().setLeft(new Node<>(35));
+
+        ArrayList arr = new ArrayList();
+        arr.add("Buzz");
+        arr.add("Buzz");
+        arr.add("Buzz");
+        arr.add("Buzz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has multiple  nodes // all divisaple by 3
+    @Test void fizzBuzzTreeTest7 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(3));
+
+        biTree.getRoot().setLeft(new Node<>(6));
+        biTree.getRoot().setRight( new Node<>(9));
+
+        biTree.getRoot().getLeft().setLeft(new Node<>(12));
+
+        ArrayList arr = new ArrayList();
+        arr.add("Fizz");
+        arr.add("Fizz");
+        arr.add("Fizz");
+        arr.add("Fizz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+    // test if tree has multiple  nodes // all divisaple by 3 & 5
+    @Test void fizzBuzzTreeTest8 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(15));
+
+        biTree.getRoot().setLeft(new Node<>(30));
+        biTree.getRoot().setRight( new Node<>(60));
+
+        biTree.getRoot().getLeft().setLeft(new Node<>(120));
+
+        ArrayList arr = new ArrayList();
+        arr.add("FizzBuzz");
+        arr.add("FizzBuzz");
+        arr.add("FizzBuzz");
+        arr.add("FizzBuzz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+
+    // test if tree has multiple  nodes // contains all cases
+    @Test void fizzBuzzTreeTest10 ()
+    {
+        BinaryTree <Integer> biTree = new BinaryTree<>();
+        biTree.setRoot(new Node<>(2));
+
+        biTree.getRoot().setLeft(new Node<>(15));
+        biTree.getRoot().setRight( new Node<>(20));
+
+        biTree.getRoot().getLeft().setLeft(new Node<>(9));
+
+        ArrayList arr = new ArrayList();
+        arr.add("2");
+        arr.add("FizzBuzz");
+        arr.add("Fizz");
+        arr.add("Buzz");
+        assertEquals(biTree.fizzBuzzTree(biTree.getRoot()),arr);
+    }
+
     ///////////// Tests for code 17 ////////////
     // test if tree is empty // it will raise an exception
     @Test void breadthemptyTreeTest ()

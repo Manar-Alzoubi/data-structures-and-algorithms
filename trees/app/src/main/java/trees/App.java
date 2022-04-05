@@ -12,20 +12,37 @@ public class App {
 //        System.out.println(new App().getGreeting());
         System.out.println("///////// code 17 /////// \n");
         BinaryTree <Integer> biTree = new BinaryTree<>();
-        biTree.setRoot(new Node<>(2));
+        ///////lab 18 /////
+        biTree.setRoot(new Node<>(3));
 
         biTree.getRoot().setLeft(new Node<>(7));
         biTree.getRoot().setRight( new Node<>(5));
 
-        biTree.getRoot().getLeft().setLeft(new Node<>(2));
-        biTree.getRoot().getLeft().setRight(new Node<>(6));
+        biTree.getRoot().getLeft().setLeft(new Node<>(15));
+        biTree.getRoot().getLeft().setRight(new Node<>(25));
         biTree.getRoot().getRight().setRight(new Node<>(9));
 
-        biTree.getRoot().getLeft().getRight().setLeft(new Node<>(5));
-        biTree.getRoot().getLeft().getRight().setRight(new Node<>(11));
-        biTree.getRoot().getRight().getRight().setLeft(new Node<>(4));
+        biTree.getRoot().getLeft().getRight().setLeft(new Node<>(13));
+        biTree.getRoot().getLeft().getRight().setRight(new Node<>(30));
+        biTree.getRoot().getRight().getRight().setLeft(new Node<>(2));
 
-        System.out.println( biTree.breadthFirst(biTree.getRoot()));
+        System.out.println(" origin tree-->   "+ biTree.preOrder(biTree.getRoot()));
+        System.out.println("fizzBuzz tree -- > "+biTree.fizzBuzzTree(biTree));
+
+//        biTree.setRoot(new Node<>(2));
+//
+//        biTree.getRoot().setLeft(new Node<>(7));
+//        biTree.getRoot().setRight( new Node<>(5));
+//
+//        biTree.getRoot().getLeft().setLeft(new Node<>(2));
+//        biTree.getRoot().getLeft().setRight(new Node<>(6));
+//        biTree.getRoot().getRight().setRight(new Node<>(9));
+
+//        biTree.getRoot().getLeft().getRight().setLeft(new Node<>(5));
+//        biTree.getRoot().getLeft().getRight().setRight(new Node<>(11));
+//        biTree.getRoot().getRight().getRight().setLeft(new Node<>(4));
+
+//        System.out.println( biTree.breadthFirst(biTree.getRoot()));
 
 
 
