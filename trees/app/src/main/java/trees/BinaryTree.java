@@ -22,6 +22,40 @@ public class BinaryTree <T extends Comparable<T>>{
         this.root = root;
     }
 
+    ////////////////// code for challenge 18 /////////////////
+
+    public ArrayList fizzBuzzTree (BinaryTree  tree) { // recieve the tree
+        if(tree.getRoot() == null ) // if tree is empty
+            throw new IllegalStateException(" Empty tree ");
+        return fizzBuzzTree(tree.getRoot()); // if not empty
+    }
+    public ArrayList<T> fizzBuzzTree (Node<T>  root)
+    {
+        int rootValue = ((Integer)root.getValue());// we can't compare node value to int value so convert the node into int
+        if(rootValue % 3 == 0 &&rootValue% 5 ==0 ) {//if divisable by 3 &5 at same time
+            root.setValue((T) "FizzBuzz");
+            arrOfIn.add(root.getValue());
+        }
+        else if (rootValue % 3 == 0) { //if divisable by 3
+            root.setValue((T) "Fizz");
+            arrOfIn.add(root.getValue());
+        }
+        else if(rootValue % 5 == 0) { //if divisable by 5
+            root.setValue((T) "Buzz");
+            arrOfIn.add(root.getValue());
+        }
+        else { // otherwise, (if not divisable by 3 or 5 )
+            root.setValue((T) String.valueOf(rootValue));
+            arrOfIn.add(root.getValue());
+        }
+        if(root.getLeft() != null) // if root has left node
+            fizzBuzzTree(root.getLeft());
+        if(root.getRight() != null) // if root has right node
+            fizzBuzzTree(root.getRight());
+        return arrOfIn;
+    }
+
+
     // code for code challenge 17
 
 public ArrayList<T> breadthFirst(Node <T> root) {
