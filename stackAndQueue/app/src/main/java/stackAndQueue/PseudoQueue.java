@@ -56,19 +56,29 @@ public class PseudoQueue<T> {
         }
     }
 
-
     @Override
     public String toString() {
-        String allQueueToPrint = "PseudoQueue{ back->";
-        Node<T> pointerAtCurrent;
-        pointerAtCurrent =backPointer;
-        while (pointerAtCurrent !=null){
-            allQueueToPrint+="{"+ pointerAtCurrent.getValue()+"}->";
-            pointerAtCurrent = pointerAtCurrent.getNext();
-        }
-        allQueueToPrint=allQueueToPrint+"front";
-//        frontPointer=frontPointer.getNext();
-        return allQueueToPrint;
+        return "PseudoQueue{" +
+                "firstStack=" + firstStack +
+                ", secondStackTemp=" + secondStackTemp +
+                ", backPointer=" + backPointer +
+                ", frontPointer=" + frontPointer +
+                ", size=" + size +
+                '}';
     }
+//    @Override
+//    public String toString() {
+//        Node<T> pointerAtCurrent = firstStack.getTop();
+////        String allQueueToPrint = "PseudoQueue{ back->";
+//        String allQueueToPrint ="";
+////        pointerAtCurrent =backPointer;
+//        while (pointerAtCurrent !=null){
+//            allQueueToPrint+= pointerAtCurrent.getValue()+"}->";
+//            pointerAtCurrent = pointerAtCurrent.getNext();
+//        }
+//        allQueueToPrint=allQueueToPrint+"front";
+////        frontPointer=frontPointer.getNext();
+//        return allQueueToPrint;
+//    }
 
 }
