@@ -1,9 +1,38 @@
 package trees;
 
+import java.util.ArrayList;
+
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T>{
     public Node<T> root;
 
+    @Override
+    public Node<T> getRoot() {
+        return root;
+    }
 
+    @Override
+    public void setRoot(Node<T> root) {
+        this.root = root;
+    }
+
+    //
+public static int sum = 0;
+
+    public int sumOfOdds(Node <T> root){
+        if(root == null)
+            return 0;
+        int rootValue = ((Integer)root.getValue());
+        if (rootValue % 2 != 0)
+            sum=sum + rootValue;
+
+        if(root.getLeft() !=null){
+            sumOfOdds(root.getLeft());
+        }
+        if(root.getRight()!=null){
+            sumOfOdds(root.getRight());
+        }
+        return sum;
+    }
 
     public void add(T value) {
         Node<T> node = new Node<>(value) ;
