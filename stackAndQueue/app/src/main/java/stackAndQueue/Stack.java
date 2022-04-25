@@ -10,6 +10,25 @@ public class Stack <T>{
         this.top = null;
         size = 0;
     }
+    public int getMax()
+    {
+        int max = 0;
+
+        if (isEempty())
+            System.out.println("stack is empty");
+        else max= (int) peek();
+        while(!isEempty())
+        {
+            if (max>(int) peek())
+                pop();
+            else{
+                max= (int)peek();
+                pop();
+            }
+        }
+        return max;
+    }
+
 
     public Node<T> getTop() {
         return top;
