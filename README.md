@@ -22,6 +22,7 @@
 | code17 | Breadth first traversal (challenge 17) |           [Link](./trees/readme17.md)            |
 | code18 | FizzBuzz tree (challenge 18)           |           [Link](./trees/readme18.md)            |
 | code19 | sum of odds (challenge 19)             |           [Link](./trees/readme19.md)            |
+| code26 | Insertion Sort (challenge 26)          |            [Link](./code26/readme.md)            |
 
 
 
