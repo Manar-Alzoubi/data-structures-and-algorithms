@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="" />
+
+    <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
+
+      <change afterPath="$PROJECT_DIR$/code26/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/code26.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/BLOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/app/src/main/java/code26/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/app/src/test/java/code26/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code26/settings.gradle" afterDir="false" />
+
+
+
+      <change afterPath="$PROJECT_DIR$/trees/readme18.md" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trees/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/main/java/trees/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trees/app/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/main/java/trees/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trees/app/src/test/java/trees/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/test/java/trees/AppTest.java" afterDir="false" />
+
+
+    </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
