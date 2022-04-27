@@ -23,6 +23,7 @@
 | code18 | FizzBuzz tree (challenge 18)           |           [Link](./trees/readme18.md)            |
 | code19 | sum of odds (challenge 19)             |           [Link](./trees/readme19.md)            |
 | code26 | Insertion Sort (challenge 26)          |            [Link](./code26/readme.md)            |
+| code27 | Merge Sort (challenge 27)              |            [Link](./code27/readme.md)            |
 
 
 
