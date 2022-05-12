@@ -24,4 +24,5 @@
 | code26 | Insertion Sort (challenge 26)          |            [Link](./code26/readme.md)            |
 | code27 | Merge Sort (challenge 27)              |            [Link](./code27/readme.md)            |
 | code27 | Quick Sort (challenge 28)              |            [Link](./code28/readme.md)            |
+| code27 | Hash Table  (challenge 30)             |            [Link](./code30/readme.md)            |
 
