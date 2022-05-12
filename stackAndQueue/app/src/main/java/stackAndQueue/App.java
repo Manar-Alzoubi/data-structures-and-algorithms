@@ -1,29 +1,31 @@
 
+
 package stackAndQueue;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
 
-      Queue queue=new Queue<>();
-      queue.enqueue(5);
-      queue.enqueue(7);
-      queue.enqueue(3);
-      System.out.println(queue);
-      System.out.println("dequeue -->  "+ queue.dequeue());
-      System.out.println("dequeue -->  "+ queue.dequeue());
-      System.out.println("queue after dequeue -->  "+ queue);
-      AnimalShelter animalShelter = new AnimalShelter();
 
-      animalShelter.enqueue(new Cat("cat1") );
-        animalShelter.enqueue(new Cat("cat2") );
-        animalShelter.enqueue(new Cat("cat3") );
-        animalShelter.enqueue(new Dog("Dog1") );
-        animalShelter.enqueue(new Dog("Dog2") );
-        System.out.println(animalShelter);
-        animalShelter.deQueue("cat");
-        animalShelter.deQueue("dog");
-        System.out.println(animalShelter);
+//       Queue queue=new Queue<>();
+//       queue.enqueue(5);
+//       queue.enqueue(7);
+//       queue.enqueue(3);
+//       System.out.println(queue);
+//       System.out.println("dequeue -->  "+ queue.dequeue());
+//       System.out.println("dequeue -->  "+ queue.dequeue());
+//       System.out.println("queue after dequeue -->  "+ queue);
+//       AnimalShelter animalShelter = new AnimalShelter();
+
+//       animalShelter.enqueue(new Cat("cat1") );
+//         animalShelter.enqueue(new Cat("cat2") );
+//         animalShelter.enqueue(new Cat("cat3") );
+//         animalShelter.enqueue(new Dog("Dog1") );
+//         animalShelter.enqueue(new Dog("Dog2") );
+//         System.out.println(animalShelter);
+//         animalShelter.deQueue("cat");
+//         animalShelter.deQueue("dog");
+//         System.out.println(animalShelter);
 
 
 
@@ -46,6 +48,7 @@ public class App {
 //        System.out.println("(Sadan} ==> " + isValid.validateBrackets("(Sadan}"));
 //        System.out.println("(Sa]dan} ==> " + isValid.validateBrackets("(Sa]dan}"));
 
+
 //        AnimalShelter allAnimals = new AnimalShelter();
 //        Dog dog = new Dog("dog1");
 //        allAnimals.enqueue(dog);
@@ -66,6 +69,22 @@ public class App {
 //        System.out.println(allAnimals);
     }
 
+    
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
