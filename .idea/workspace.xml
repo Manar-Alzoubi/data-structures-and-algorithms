@@ -6,6 +6,21 @@
   <component name="ChangeListManager">
 
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/code30/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/app/src/main/java/code30/HashNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/app/src/main/java/code30/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code30/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+
+
+    <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
 
       <change afterPath="$PROJECT_DIR$/code26/.gitattributes" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code26/.gitignore" afterDir="false" />
