@@ -24,8 +24,9 @@
 | code19 | sum of odds (challenge 19)             |           [Link](./trees/readme19.md)            |
 | code26 | Insertion Sort (challenge 26)          |            [Link](./code26/readme.md)            |
 | code27 | Merge Sort (challenge 27)              |            [Link](./code27/readme.md)            |
-| code27 | Quick Sort (challenge 28)              |            [Link](./code28/readme.md)            |
-| code27 | Hash Table  (challenge 30)             |            [Link](./code30/readme.md)            |
+| code28 | Quick Sort (challenge 28)              |            [Link](./code28/readme.md)            |
+| code30 | Hash Table  (challenge 30)             |            [Link](./code30/readme.md)            |
+| code31 | Repeated word  (challenge 31)          |           [Link](./code30/readme31.md)           |
 
 
 
