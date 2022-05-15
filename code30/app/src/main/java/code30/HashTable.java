@@ -1,7 +1,6 @@
 package code30;
 
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.*;
 
 public class HashTable <K,V>{
     private ArrayList<HashNode<K, V>> bucketArray;
@@ -123,6 +122,25 @@ public class HashTable <K,V>{
         arrayIndex = arrayIndex < 0 ? arrayIndex * -1 : arrayIndex;
 //        System.out.println("The index of => " + key + " is => " + arrayIndex);
         return arrayIndex;
+    }
+
+
+    ////////////////// code challenge 31 /////////////////
+
+    public String repeatedWord(String str){
+        String replaceComma = str.replace(",","");
+        String[] arr = replaceComma.split(" ");
+        Map<String,Integer> wordsList =new HashMap<>();
+        for (String subStr : arr){
+            Integer count = wordsList.get(subStr.toLowerCase());
+            if(count != null){
+                wordsList.put(subStr.toLowerCase(), count +1);
+                return subStr.toLowerCase();
+            }else {
+                wordsList.put(subStr.toLowerCase(), 0);
+            }
+        }
+        return "no repeated : str is empty ";
     }
 
 

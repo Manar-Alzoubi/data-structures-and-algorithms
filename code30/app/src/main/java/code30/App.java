@@ -10,38 +10,46 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Hash Tables Class");
+        System.out.println("Welcome to Hash Tables Class\n");
 
         HashTable<String, String> HashTable = new HashTable<String,String>();
-        HashTable.set("JAVA", "JAVA");
-        HashTable.set("Amman", "Amman");
-        HashTable.set("Jordan", "Jordan");
-        HashTable.set("J", "J");
-        HashTable.set("Bob", "Bob");
-        HashTable.set("Carl", "Carl");
-        HashTable.set("Sadan", "2015");
-        HashTable.set("Elien", "2014");
+//        HashTable.set("JAVA", "JAVA");
+//        HashTable.set("Amman", "Amman");
+//        HashTable.set("Jordan", "Jordan");
+//        HashTable.set("J", "J");
+//        HashTable.set("Bob", "Bob");
+//        HashTable.set("Carl", "Carl");
+//        HashTable.set("Sadan", "2015");
+//        HashTable.set("Elien", "2014");
+//
+//        System.out.println("\nThe index of => JAVA" + " is => " + HashTable.hash("JAVA"));
+//        System.out.println("The index of => Amman" + " is => " + HashTable.hash("Amman"));
+//        System.out.println("The index of => Bob" + " is => " + HashTable.hash("Bob"));
+//        System.out.println("The index of => Jordan" + " is => " + HashTable.hash("Jordan"));
+//        System.out.println("The index of => Sadan" + " is => " + HashTable.hash("Sadan"));
+//        System.out.println("The index of => Elien" + " is => " + HashTable.hash("Elien"));
+//
+//
+//        System.out.println("\nHashTable contains Amman : "+ HashTable.contains("Amman"));
+//        System.out.println("HashTable contains Bob : "+ HashTable.contains("Bob"));
+//        System.out.println("HashTable contains Manar : "+ HashTable.contains("Manar"));
+//        System.out.println("HashTable contains 155 : "+ HashTable.contains("155"));
+//        System.out.println("HashTable contains 134 : "+ HashTable.contains("134"));
+//
+//        System.out.println("\nKeys are : " + HashTable.keys());
+//
+//        System.out.println("\nKey : JAVA ==>  value : "+ HashTable.get("JAVA"));
+//        System.out.println("Key : Jordan ==>  value : "+ HashTable.get("Jordan"));
+//        System.out.println("Key : Sadan ==>  value : "+ HashTable.get("Sadan"));
+//        System.out.println("Key : Elien ==>  value : "+ HashTable.get("Elien"));
 
-        System.out.println("\nThe index of => JAVA" + " is => " + HashTable.hash("JAVA"));
-        System.out.println("The index of => Amman" + " is => " + HashTable.hash("Amman"));
-        System.out.println("The index of => Bob" + " is => " + HashTable.hash("Bob"));
-        System.out.println("The index of => Jordan" + " is => " + HashTable.hash("Jordan"));
-        System.out.println("The index of => Sadan" + " is => " + HashTable.hash("Sadan"));
-        System.out.println("The index of => Elien" + " is => " + HashTable.hash("Elien"));
+        //////////////////////////// code challenge 31 ///////////////////////
 
-
-        System.out.println("\nHashTable contains Amman : "+ HashTable.contains("Amman"));
-        System.out.println("HashTable contains Bob : "+ HashTable.contains("Bob"));
-        System.out.println("HashTable contains Manar : "+ HashTable.contains("Manar"));
-        System.out.println("HashTable contains 155 : "+ HashTable.contains("155"));
-        System.out.println("HashTable contains 134 : "+ HashTable.contains("134"));
-
-        System.out.println("\nKeys are : " + HashTable.keys());
-
-        System.out.println("\nKey : JAVA ==>  value : "+ HashTable.get("JAVA"));
-        System.out.println("Key : Jordan ==>  value : "+ HashTable.get("Jordan"));
-        System.out.println("Key : Sadan ==>  value : "+ HashTable.get("Sadan"));
-        System.out.println("Key : Elien ==>  value : "+ HashTable.get("Elien"));
+        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("Once upon a time, there was a brave princess who..."));
+        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."));
+        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
+        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("@ + @ +"));
+        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord(""));
 
 
     }
