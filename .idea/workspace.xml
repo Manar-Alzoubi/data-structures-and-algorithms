@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/code30/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/app/src/main/java/code30/HashNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/app/src/main/java/code30/HashTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code30/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/HashNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/TreeIntersection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeIntersection/read32.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +43,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\96277\dataStructure1\data-structures-and-algorithms\TreeIntersection" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

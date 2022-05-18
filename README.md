@@ -26,4 +26,5 @@
 | code28 | Quick Sort (challenge 28)              |            [Link](./code28/readme.md)            |
 | code30 | Hash Table  (challenge 30)             |            [Link](./code30/readme.md)            |
 | code31 | Repeated word  (challenge 31)          |           [Link](./code30/readme31.md)           |
+| code32 | Trees Intersection  (challenge 32)     |       [Link](./TreeIntersection/read32.md)       |
 
