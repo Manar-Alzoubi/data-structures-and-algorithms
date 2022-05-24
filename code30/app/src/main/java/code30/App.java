@@ -3,16 +3,69 @@
  */
 package code30;
 
-import code30.HashTable;
+import java.util.HashMap;
 
 public class App {
+  public  static boolean isFullOfUnique(String str) {
+        HashTable<Character, Integer> hashTable = new HashTable<>();
+        str = str.toLowerCase();
+        Character char1;
+        for (int i = 0; i < str.length(); i++) {
+            char1 = str.charAt(i);
+            if (str.charAt(i) != ' ') {
+                if (hashTable.contains(str.charAt(i))) {
+                    return false;
+                }
+            }
+                hashTable.set(str.charAt(i), 1);
+            }
+            return true;
+        }
 
+        public static String mostCommon(String str) {
+            int maxWord = 0;
+            String commonWord = null;
+            HashMap<String, Integer> hashMap = new HashMap<>();
+            str = str.toLowerCase();
+            String[] arr = str.split(" ");
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] != "!" || arr[i] != "," || arr[i] != "." || arr[i] != "?" || arr[i] != ":" || arr[i] != ";") {
+                    if (!hashMap.containsKey(arr[i])) {
+                        hashMap.put(arr[i], 1);
+                    } else {
+                        hashMap.put(arr[i], hashMap.get(arr[i]) + 1);
+                        if (hashMap.get(arr[i]) + 1 > maxWord) {
+                            maxWord = hashMap.get(arr[i]) + 1;
+                            commonWord = arr[i];
+                        }
+                        hashMap.put(arr[i], maxWord);
+                    }
+                }
+            }
+            return commonWord;
+            }
+          
 
     public static void main(String[] args) {
 
         System.out.println("Welcome to Hash Tables Class\n");
 
-        HashTable<String, String> HashTable = new HashTable<String,String>();
+//        HashMap<String, String> HashTable = new HashMap<>();
+//        System.out.println(isFullOfUnique("The quick brown fox jumps over the lazy dog"));
+//        System.out.println(isFullOfUnique("I love cats"));
+//        System.out.println(isFullOfUnique("Donald the duck"));
+//        System.out.println(isFullOfUnique("m1234 m"));
+        System.out.println(mostCommon("In galaxy far far away"));
+        System.out.println(mostCommon("Taco cat ate a taco"));
+        System.out.println(mostCommon("No. Try not. Do or do not. There is no try."));
+//        mostCommon("In galaxy far far away");
+//        System.out.println( HashTable.isUnique("The quick brown fox jumps over the lazy dog"));
+//        System.out.println(HashTable.isUnique("I love cats"));
+//        System.out.println(isUnique("Donald the duck"));
+
+//        System.out.println(HashTable.isUnique("mmn14"));
+//        System.out.println(HashTable.keys());
+
 //        HashTable.set("JAVA", "JAVA");
 //        HashTable.set("Amman", "Amman");
 //        HashTable.set("Jordan", "Jordan");
@@ -45,11 +98,13 @@ public class App {
 
         //////////////////////////// code challenge 31 ///////////////////////
 
-        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("Once upon a time, there was a brave princess who..."));
-        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."));
-        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
-        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("@ + @ +"));
-        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord(""));
+//        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("Once upon a time, there was a brave princess who..."));
+//        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."));
+//        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
+//        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord("@ + @ +"));
+//        System.out.println("the first word to occur more than once in str is :  "+HashTable.repeatedWord(""));
+        //////////////////////////////////////
+
 
 
     }
