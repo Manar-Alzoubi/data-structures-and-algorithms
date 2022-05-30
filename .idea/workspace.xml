@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/code35/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code35/.idea/compiler.xml" afterDir="false" />
@@ -74,3 +75,4 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
+
