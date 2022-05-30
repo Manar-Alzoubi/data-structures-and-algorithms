@@ -5,56 +5,74 @@
   </component>
   <component name="ChangeListManager">
 
-    <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="" />
     <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/HashNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/HashTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/app/src/main/java/TreeIntersection/TreeIntersection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeIntersection/read32.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/app/src/main/java/code35/Graph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/app/src/main/java/code35/Vertex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code35/app/src/test/java/code35/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code30/app/src/main/java/code30/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/code30/app/src/main/java/code30/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code30/app/src/main/java/code30/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/code30/app/src/main/java/code30/HashTable.java" afterDir="false" />
     </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25tKJdRKbTyNRnwTwjhANi0JnTs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\96277\dataStructure1\data-structures-and-algorithms\TreeIntersection" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="" />
+      <created>1646340884985</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646340884985</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
 
-
-    <list default="true" id="c677dc7c-aa4a-4d7a-b60e-67b2cd52e707" name="Changes" comment="">
-
-      <change afterPath="$PROJECT_DIR$/code26/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/code26.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/BLOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/app/src/main/java/code26/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/app/src/test/java/code26/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code26/settings.gradle" afterDir="false" />
-
-
-
-      <change afterPath="$PROJECT_DIR$/trees/readme18.md" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/main/java/trees/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/app/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/main/java/trees/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/app/src/test/java/trees/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trees/app/src/test/java/trees/AppTest.java" afterDir="false" />
-
-
-    </list>
